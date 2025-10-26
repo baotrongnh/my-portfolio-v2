@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-
+@plugin "tailwindcss-motion";
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -118,5 +118,9 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
   }
 }
