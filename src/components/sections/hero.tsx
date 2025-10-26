@@ -1,4 +1,5 @@
 import { Button } from "../ui/button";
+import { Magnetic } from "../ui/magnetic";
 import { Spotlight } from "../ui/spotlight-new";
 
 export default function Hero() {
@@ -17,14 +18,18 @@ export default function Hero() {
                          personal life, to the resources I often use, and of course, code.
                     </p>
                     <div className="flex justify-center gap-5 mt-7" data-aos="zoom-in-up" data-aos-delay={750}>
-                         <a href='https://m.me/baotrong.nguyenhuynh.52/' target='_blank'>
-                              <Button className='motion-preset-seesaw'>
-                                   Hire me
-                              </Button>
-                         </a>
-                         <a href='https://github.com/baotrongnh' target='_blank'>
-                              <Button className='duration-200' variant="outline">Github</Button>
-                         </a>
+                         <Magnetic>
+                              <a href='https://m.me/baotrong.nguyenhuynh.52/' target='_blank'>
+                                   <Button className='motion-preset-seesaw px-10' size='lg'>
+                                        Hire me
+                                   </Button>
+                              </a>
+                         </Magnetic>
+                         <Magnetic>
+                              <a href='https://github.com/baotrongnh' target='_blank'>
+                                   <Button className='duration-200 px-10' variant="outline" size='lg'>Github</Button>
+                              </a>
+                         </Magnetic>
                     </div>
 
                     <div className='flex flex-col absolute right-0'>
