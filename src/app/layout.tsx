@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
 import AOSAnimate from "@/components/animation/aos-animate";
 import 'aos/dist/aos.css'
+import SplashLayout from "@/components/splash-screen";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +38,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <SplashLayout>{children}</SplashLayout>
           <AOSAnimate />
           <Dock />
         </ThemeProvider>
