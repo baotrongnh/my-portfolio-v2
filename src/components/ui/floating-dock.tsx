@@ -104,19 +104,37 @@ const FloatingDockDesktop = ({
   className?: string
 }) => {
   const mouseX = useMotionValue(Infinity)
+  const [isHovered, setIsHovered] = useState(false)
+
   return (
-    <motion.div
-      onMouseMove={(e) => mouseX.set(e.pageX)}
-      onMouseLeave={() => mouseX.set(Infinity)}
-      className={cn(
-        "mx-auto hidden h-18 items-end gap-5 rounded-2xl bg-gray-50 px-6 pb-4 md:flex dark:bg-neutral-900/60 backdrop-blur-2xl",
-        className,
-      )}
-    >
-      {items.map((item) => (
-        <IconContainer mouseX={mouseX} key={item.title} {...item} />
-      ))}
-    </motion.div>
+    <>
+      <AnimatePresence>
+        {isHovered && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="hidden md:block fixed inset-0 backdrop-blur-xs z-40 pointer-events-none"
+          />
+        )}
+      </AnimatePresence>
+      <motion.div
+        onMouseMove={(e) => mouseX.set(e.pageX)}
+        onMouseLeave={() => {
+          mouseX.set(Infinity)
+          setIsHovered(false)
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        className={cn(
+          "mx-auto hidden h-18 items-end gap-5 rounded-2xl bg-gray-50 px-6 pb-4 md:flex dark:bg-neutral-900/60 backdrop-blur-2xl relative z-50",
+          className,
+        )}
+      >
+        {items.map((item) => (
+          <IconContainer mouseX={mouseX} key={item.title} {...item} />
+        ))}
+      </motion.div>
+    </>
   )
 }
 
