@@ -1,4 +1,5 @@
 import { Button } from "../ui/button";
+import { LinkPreview } from "../ui/link-preview";
 import { Magnetic } from "../ui/magnetic";
 import { Spotlight } from "../ui/spotlight-new";
 
@@ -6,7 +7,7 @@ export default function Hero() {
      return (
           <section className="h-dvh w-dvw overflow-hidden antialiased relative">
                <Spotlight />
-               <div className='container mx-auto h-full flex flex-col justify-center text-center z-50'>
+               <div className='container mx-auto h-full flex flex-col justify-center text-center z-50' data-aos="fade-up">
                     <p className='text-xl'>
                          Hi, I&apos;m <b className='text-primary'>Bao Trong</b>
                     </p>
@@ -26,9 +27,9 @@ export default function Hero() {
                               </a>
                          </Magnetic>
                          <Magnetic>
-                              <a href='https://github.com/baotrongnh' target='_blank'>
+                              <LinkPreview url="https://github.com/baotrongnh" openInNewTab={true}>
                                    <Button className='duration-200 px-10' variant="outline" size='lg'>Github</Button>
-                              </a>
+                              </LinkPreview>
                          </Magnetic>
                     </div>
                </div>
