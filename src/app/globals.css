@@ -2,6 +2,17 @@
 @import "tw-animate-css";
 @plugin "tailwindcss-motion";
 @custom-variant dark (&:is(.dark *));
+@utility container {
+  margin-inline: auto;
+}
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+}
 
 @theme inline {
   --color-background: var(--background);
