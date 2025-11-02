@@ -1,8 +1,8 @@
 import ComingSoon from '@/components/sections/coming-soon'
 import React from 'react'
 
-export default function Skill() {
-  return (
-    <ComingSoon />
-  )
+export default function Contact() {
+     return (
+          <ComingSoon />
+     )
 }
