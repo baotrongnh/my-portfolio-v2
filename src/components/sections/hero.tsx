@@ -4,7 +4,7 @@ import { Spotlight } from "../ui/spotlight-new";
 
 export default function Hero() {
      return (
-          <div className="h-dvh w-dvw overflow-hidden antialiased relative">
+          <section className="h-dvh w-dvw overflow-hidden antialiased relative">
                <Spotlight />
                <div className='container mx-auto h-full flex flex-col justify-center text-center z-50'>
                     <p className='text-xl'>
@@ -32,6 +32,6 @@ export default function Hero() {
                          </Magnetic>
                     </div>
                </div>
-          </div>
+          </section>
      )
 }
