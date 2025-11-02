@@ -1,11 +1,11 @@
+import AOSAnimate from "@/components/animation/aos-animate";
 import { Dock } from "@/components/layout/dock";
+import SplashLayout from "@/components/splash-screen";
+import 'aos/dist/aos.css';
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
-import AOSAnimate from "@/components/animation/aos-animate";
-import 'aos/dist/aos.css'
-import SplashLayout from "@/components/splash-screen";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,7 +38,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SplashLayout>{children}</SplashLayout>
+          <SplashLayout>
+            {children}
+          </SplashLayout>
           <AOSAnimate />
           <Dock />
         </ThemeProvider>
