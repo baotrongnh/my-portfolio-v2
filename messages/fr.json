@@ -1,0 +1,11 @@
+{
+  "HomePage": {
+    "title": "Bonjour le monde !",
+    "myName": "Bao Trong",
+    "hi": "Salut",
+    "i'm": "Je suis",
+    "description": "Bienvenue sur ma page portfolio, où vous trouverez tout sur moi - de mes passe-temps, photographie, vie personnelle, aux ressources que j'utilise souvent, et bien sûr, le code.",
+    "hireMe": "Embauchez-moi",
+    "languages": "Langues"
+  }
+}
