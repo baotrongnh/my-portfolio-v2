@@ -3,6 +3,7 @@ import { Dock } from "@/components/layout/dock";
 import SplashLayout from "@/components/splash-screen";
 import 'aos/dist/aos.css';
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
@@ -39,7 +40,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SplashLayout>
-            {children}
+            <NextIntlClientProvider>
+              {children}
+            </NextIntlClientProvider>
           </SplashLayout>
           <AOSAnimate />
           <Dock />
