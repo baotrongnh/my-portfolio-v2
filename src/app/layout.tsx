@@ -1,5 +1,8 @@
 import AOSAnimate from "@/components/animation/aos-animate";
 import { Dock } from "@/components/layout/dock";
+import { ActiveSectionProvider } from "@/components/layout/active-section-context";
+import { BackgroundMusic } from "@/components/layout/background-music";
+import ParticlesBackground from "@/components/animation/particles-background";
 import SplashLayout from "@/components/splash-screen";
 import 'aos/dist/aos.css';
 import type { Metadata } from "next";
@@ -39,13 +42,17 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SplashLayout>
-            <NextIntlClientProvider>
-              {children}
-            </NextIntlClientProvider>
-          </SplashLayout>
-          <AOSAnimate />
-          <Dock />
+          <ActiveSectionProvider>
+            <ParticlesBackground />
+            <SplashLayout>
+              <NextIntlClientProvider>
+                {children}
+              </NextIntlClientProvider>
+            </SplashLayout>
+            <AOSAnimate />
+            <Dock />
+            <BackgroundMusic />
+          </ActiveSectionProvider>
         </ThemeProvider>
       </body>
     </html>
