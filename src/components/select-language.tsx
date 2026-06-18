@@ -103,7 +103,8 @@ export default function SelectLanguage() {
 
      const handleChangeLanguage = async (newLocale: string) => {
           setCurrentLocale(newLocale)
-          await setLocale(newLocale)
+          const data = await setLocale(newLocale)
+          console.log(data);
           router.refresh()
      }
 

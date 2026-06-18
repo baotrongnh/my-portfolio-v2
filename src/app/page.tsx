@@ -1,15 +1,22 @@
 import Hero from "@/components/sections/hero"
+import AboutSection from "@/components/sections/about-section"
+import SkillSection from "@/components/sections/skill-section"
+import ProjectSection from "@/components/sections/project-section"
+import ContactSection from "@/components/sections/contact-section"
+import { ScrollContainer } from "@/components/layout/scroll-container"
 import SelectLanguage from "@/components/select-language"
-import { cookies } from "next/headers"
 
-export default async function Home() {
-  const cookieStore = await cookies()
-  const locale = cookieStore.get('NHBT_LOCALE')?.value || 'en'
-
+export default function Home() {
   return (
-    <div>
-      <Hero />
+    <>
+      <ScrollContainer>
+        <Hero />
+        <AboutSection />
+        <SkillSection />
+        <ProjectSection />
+        <ContactSection />
+      </ScrollContainer>
       <SelectLanguage />
-    </div>
+    </>
   )
 }

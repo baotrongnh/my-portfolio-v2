@@ -1,14 +1,18 @@
+"use client"
+
 import { useTranslations } from "next-intl";
 import { Button } from "../ui/button";
 import { LinkPreview } from "../ui/link-preview";
 import { Magnetic } from "../ui/magnetic";
 import { Spotlight } from "../ui/spotlight-new";
+import { ChevronDown } from "lucide-react";
+import { motion } from "motion/react";
 
 export default function Hero() {
      const t = useTranslations("HomePage")
 
      return (
-          <section className="h-dvh w-dvw overflow-hidden antialiased relative">
+          <section id="hero" className="fullscreen-section h-dvh w-dvw overflow-hidden antialiased relative">
                <Spotlight />
                <div className='container mx-auto h-full flex flex-col justify-center text-center z-50' data-aos="fade-up">
                     <p className='text-xl'>
@@ -37,6 +41,16 @@ export default function Hero() {
                          </Magnetic>
                     </div>
                </div>
+
+               {/* Scroll Indicator */}
+               <motion.div 
+                    animate={{ y: [0, 15, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute bottom-28 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-70 z-50 pointer-events-none"
+               >
+                    <span className="text-xs uppercase tracking-widest font-medium text-muted-foreground">Scroll</span>
+                    <ChevronDown className="w-6 h-6 text-primary" />
+               </motion.div>
           </section>
      )
 }
