@@ -3,7 +3,7 @@
 import { useCallback } from "react";
 import Particles from "@tsparticles/react";
 import { loadSlim } from "tsparticles-slim";
-import type { Engine } from "@tsparticles/engine";
+import type { Engine } from "tsparticles-engine";
 import { useTheme } from "next-themes";
 
 export default function ParticlesBackground() {
