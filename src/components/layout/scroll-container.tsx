@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import { useActiveSection, type SectionId } from "./active-section-context"
 import { AnimatePresence, motion } from "motion/react"
+import type { Variants } from "motion/react"
 
 const SECTION_IDS: SectionId[] = ["hero", "about", "skill", "project", "contact"]
 
@@ -14,7 +15,7 @@ export function ScrollContainer({ children }: ScrollContainerProps) {
   const { activeSection, setActiveSection } = useActiveSection()
   const [isAnimating, setIsAnimating] = useState(false)
   const [direction, setDirection] = useState(1) // 1 for down, -1 for up
-  
+
   const touchStartY = useRef(0)
   const touchStartAtBottom = useRef(true)
   const touchStartAtTop = useRef(true)
@@ -78,7 +79,7 @@ export function ScrollContainer({ children }: ScrollContainerProps) {
 
   const onTouchEnd = (e: React.TouchEvent) => {
     if (isAnimating) return
-    
+
     const touchEndY = e.changedTouches[0].clientY
     const deltaY = touchStartY.current - touchEndY
 
@@ -105,7 +106,7 @@ export function ScrollContainer({ children }: ScrollContainerProps) {
       rotateX: 0,
       transition: {
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1], // Wow easing
+        ease: [0.16, 1, 0.3, 1] as const,
       },
     },
     exit: (direction: number) => ({
@@ -115,10 +116,10 @@ export function ScrollContainer({ children }: ScrollContainerProps) {
       rotateX: direction > 0 ? 10 : -10,
       transition: {
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0.16, 1, 0.3, 1] as const,
       },
     }),
-  }
+  } satisfies Variants
 
   // Just lock body scroll to prevent standard page scrolling
   useEffect(() => {
@@ -140,7 +141,7 @@ export function ScrollContainer({ children }: ScrollContainerProps) {
   }, [activeIndex, isAnimating])
 
   return (
-    <div 
+    <div
       className="w-screen h-dvh overflow-hidden relative"
       style={{ perspective: "1000px" }}
       onWheel={onWheel}
