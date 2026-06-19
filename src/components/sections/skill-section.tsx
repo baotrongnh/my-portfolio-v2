@@ -1,12 +1,13 @@
 "use client"
 
 import { motion, useInView } from "motion/react"
+import type { Variants } from "motion/react"
 import { useRef } from "react"
-import { 
-  Code2, 
-  Paintbrush, 
-  Terminal, 
-  Layout, 
+import {
+  Code2,
+  Paintbrush,
+  Terminal,
+  Layout,
   Database,
   Globe
 } from "lucide-react"
@@ -58,21 +59,21 @@ export default function SkillSection() {
       z: 0,
       transition: {
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1], // Custom wow easing
+        ease: [0.16, 1, 0.3, 1] as const,
         staggerChildren: 0.15
       }
     }
-  }
+  } satisfies Variants
 
   const itemVariants = {
     hidden: { y: 30, opacity: 0, scale: 0.8 },
-    visible: { 
-      y: 0, 
+    visible: {
+      y: 0,
       opacity: 1,
       scale: 1,
       transition: { type: "spring", stiffness: 100, damping: 15 }
     }
-  }
+  } satisfies Variants
 
   return (
     <section id="skill" className="fullscreen-section relative pt-16 pb-28" style={{ perspective: "1000px" }}>
@@ -84,51 +85,51 @@ export default function SkillSection() {
 
       <div className="can-scroll w-full h-full overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] z-10 relative">
         <div ref={ref} className="container mx-auto px-4 w-full max-w-6xl min-h-full flex flex-col justify-center py-8">
-        <motion.div 
-          initial={{ opacity: 0, y: -20, rotateX: -20 }}
-          animate={isInView ? { opacity: 1, y: 0, rotateX: 0 } : { opacity: 0, y: -20, rotateX: -20 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-center mb-12 sm:mb-16"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Skills & <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent inline-block py-2 px-1">Expertise</span>
-          </h2>
-          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
-            My technical toolkit for building scalable, accessible, and performant web applications.
-          </p>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: -20, rotateX: -20 }}
+            animate={isInView ? { opacity: 1, y: 0, rotateX: 0 } : { opacity: 0, y: -20, rotateX: -20 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center mb-12 sm:mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              Skills & <span className="bg-linear-to-r from-primary to-purple-500 bg-clip-text text-transparent inline-block py-2 px-1">Expertise</span>
+            </h2>
+            <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
+              My technical toolkit for building scalable, accessible, and performant web applications.
+            </p>
+          </motion.div>
 
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {skills.map((skill, index) => (
-            <motion.div 
-              key={index}
-              variants={itemVariants}
-              className="glass-card p-6 flex flex-col h-full group hover:-translate-y-2 transition-transform duration-300"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-white/5 rounded-xl group-hover:bg-white/10 transition-colors">
-                  {skill.icon}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {skills.map((skill, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="glass-card p-6 flex flex-col h-full group hover:-translate-y-2 transition-transform duration-300"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 bg-white/5 rounded-xl group-hover:bg-white/10 transition-colors">
+                    {skill.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold">{skill.category}</h3>
                 </div>
-                <h3 className="text-xl font-semibold">{skill.category}</h3>
-              </div>
-              
-              <div className="flex flex-wrap gap-2 mt-auto">
-                {skill.items.map((item, i) => (
-                  <span 
-                    key={i} 
-                    className="px-3 py-1 text-sm bg-white/5 border border-white/10 rounded-full text-foreground/80 group-hover:border-primary/30 transition-colors duration-300"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {skill.items.map((item, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 text-sm bg-white/5 border border-white/10 rounded-full text-foreground/80 group-hover:border-primary/30 transition-colors duration-300"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </div>
