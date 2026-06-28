@@ -7,28 +7,32 @@ import { useCallback, useEffect, useRef, useState } from "react"
 
 export function BackgroundMusic() {
   const audioRef = useRef<HTMLAudioElement>(null)
+  const savedMuteRef = useRef(false)
   const [isMuted, setIsMuted] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
   const [hasInteracted, setHasInteracted] = useState(false)
 
+  useEffect(() => {
+    const savedMuteState = localStorage.getItem("nhbt-music-muted") === "true"
+    savedMuteRef.current = savedMuteState
+
+    if (audioRef.current) {
+      audioRef.current.muted = savedMuteState
+    }
+  }, [])
+
   // Try to play audio after user interaction
   useEffect(() => {
-    // Check localStorage for mute preference
-    const savedMute = localStorage.getItem("nhbt-music-muted")
-    if (savedMute === "true") {
-      setIsMuted(true)
-    }
-
     const handleInteraction = () => {
       if (!hasInteracted) {
         setHasInteracted(true)
         const audio = audioRef.current
         if (audio) {
-          const savedMuteState = localStorage.getItem("nhbt-music-muted") === "true"
-          audio.muted = savedMuteState
+          audio.muted = savedMuteRef.current
           audio.volume = 0.3
           audio.play().then(() => {
             setIsPlaying(true)
+            setIsMuted(savedMuteRef.current)
           }).catch(() => {
             // Autoplay failed, user will need to click the button
           })

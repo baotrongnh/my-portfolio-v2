@@ -2,23 +2,12 @@
 
 import { cn } from "@/lib/utils"
 import {
-  Briefcase,
-  Bug,
-  Code2,
   CodeXml,
-  Contact,
   FolderGit2,
-  FolderOpenDot,
   Home,
-  Layers,
   Mail,
-  MonitorSmartphone,
-  Rocket,
-  Send,
-  Sparkles,
   User,
   Wrench,
-  Zap,
 } from "lucide-react"
 import {
   AnimatePresence,
@@ -28,47 +17,17 @@ import {
   useSpring,
   useTransform,
 } from "motion/react"
+import { useTranslations } from "next-intl"
 import { useRef, useState } from "react"
 import { useActiveSection, type SectionId } from "./active-section-context"
 
-// Different icon sets for each section — icons change completely
-const SECTION_ICON_SETS: Record<SectionId, { title: string; icon: React.ReactNode; target: SectionId }[]> = {
-  hero: [
-    { title: "About", icon: <User />, target: "about" },
-    { title: "Skill", icon: <Bug />, target: "skill" },
-    { title: "Home", icon: <Home />, target: "hero" },
-    { title: "Project", icon: <FolderOpenDot />, target: "project" },
-    { title: "Contact", icon: <Contact />, target: "contact" },
-  ],
-  about: [
-    { title: "About", icon: <Sparkles />, target: "about" },
-    { title: "Skill", icon: <Zap />, target: "skill" },
-    { title: "Home", icon: <CodeXml />, target: "hero" },
-    { title: "Project", icon: <Briefcase />, target: "project" },
-    { title: "Contact", icon: <Mail />, target: "contact" },
-  ],
-  skill: [
-    { title: "About", icon: <User />, target: "about" },
-    { title: "Skill", icon: <Wrench />, target: "skill" },
-    { title: "Home", icon: <Code2 />, target: "hero" },
-    { title: "Project", icon: <Layers />, target: "project" },
-    { title: "Contact", icon: <Send />, target: "contact" },
-  ],
-  project: [
-    { title: "About", icon: <User />, target: "about" },
-    { title: "Skill", icon: <MonitorSmartphone />, target: "skill" },
-    { title: "Home", icon: <Rocket />, target: "hero" },
-    { title: "Project", icon: <FolderGit2 />, target: "project" },
-    { title: "Contact", icon: <Mail />, target: "contact" },
-  ],
-  contact: [
-    { title: "About", icon: <User />, target: "about" },
-    { title: "Skill", icon: <Bug />, target: "skill" },
-    { title: "Home", icon: <Home />, target: "hero" },
-    { title: "Project", icon: <FolderOpenDot />, target: "project" },
-    { title: "Contact", icon: <Send />, target: "contact" },
-  ],
-}
+const DOCK_ITEMS: { titleKey: string; icon: React.ReactNode; target: SectionId }[] = [
+  { titleKey: "home", icon: <Home />, target: "hero" },
+  { titleKey: "about", icon: <User />, target: "about" },
+  { titleKey: "skills", icon: <Wrench />, target: "skill" },
+  { titleKey: "projects", icon: <FolderGit2 />, target: "project" },
+  { titleKey: "contact", icon: <Mail />, target: "contact" },
+]
 
 export function Dock() {
   return (
@@ -81,12 +40,11 @@ export function Dock() {
   )
 }
 
-// ─── Desktop Dock ────────────────────────────────────────────
 function FloatingDockDesktop() {
+  const t = useTranslations("Dock")
   const mouseX = useMotionValue(Infinity)
   const [isHovered, setIsHovered] = useState(false)
   const { activeSection } = useActiveSection()
-  const items = SECTION_ICON_SETS[activeSection]
 
   return (
     <>
@@ -113,11 +71,11 @@ function FloatingDockDesktop() {
         )}
       >
         <AnimatePresence mode="wait">
-          {items.map((item) => (
+          {DOCK_ITEMS.map((item) => (
             <IconContainer
               mouseX={mouseX}
-              key={item.title}
-              title={item.title}
+              key={item.target}
+              title={t(item.titleKey)}
               icon={item.icon}
               target={item.target}
               isActive={item.target === activeSection}
@@ -129,11 +87,10 @@ function FloatingDockDesktop() {
   )
 }
 
-// ─── Mobile Dock ─────────────────────────────────────────────
 function FloatingDockMobile() {
+  const t = useTranslations("Dock")
   const [open, setOpen] = useState(false)
   const { activeSection, scrollToSection } = useActiveSection()
-  const items = SECTION_ICON_SETS[activeSection]
 
   return (
     <div className="relative block md:hidden">
@@ -151,9 +108,9 @@ function FloatingDockMobile() {
               layoutId="nav"
               className="absolute inset-x-[-3] bottom-full mb-2 flex flex-col gap-2 z-50"
             >
-              {items.map((item, idx) => (
+              {DOCK_ITEMS.map((item, idx) => (
                 <motion.div
-                  key={item.title}
+                  key={item.target}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{
@@ -161,7 +118,7 @@ function FloatingDockMobile() {
                     y: 10,
                     transition: { delay: idx * 0.05 },
                   }}
-                  transition={{ delay: (items.length - 1 - idx) * 0.05 }}
+                  transition={{ delay: (DOCK_ITEMS.length - 1 - idx) * 0.05 }}
                 >
                   <button
                     onClick={() => {
@@ -174,6 +131,7 @@ function FloatingDockMobile() {
                         ? "bg-primary text-primary-foreground"
                         : "bg-gray-50 dark:bg-neutral-900"
                     )}
+                    aria-label={t("goTo", { section: t(item.titleKey) })}
                   >
                     <div>{item.icon}</div>
                   </button>
@@ -186,6 +144,8 @@ function FloatingDockMobile() {
       <button
         onClick={() => setOpen(!open)}
         className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-800 z-50 relative"
+        aria-label={t("toggleNavigation")}
+        aria-expanded={open}
       >
         <CodeXml />
       </button>
@@ -193,7 +153,6 @@ function FloatingDockMobile() {
   )
 }
 
-// ─── Icon Container (Desktop) ────────────────────────────────
 function IconContainer({
   mouseX,
   title,
@@ -228,7 +187,7 @@ function IconContainer({
   const [hovered, setHovered] = useState(false)
 
   return (
-    <button onClick={() => scrollToSection(target)}>
+    <button onClick={() => scrollToSection(target)} aria-label={`Go to ${title}`}>
       <motion.div
         ref={ref}
         style={{ width, height }}
@@ -254,9 +213,8 @@ function IconContainer({
           )}
         </AnimatePresence>
 
-        {/* Icon with transition animation */}
         <motion.div
-          key={`${title}-${isActive}`}
+          key={`${target}-${isActive}`}
           initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ type: "spring", stiffness: 200, damping: 15 }}

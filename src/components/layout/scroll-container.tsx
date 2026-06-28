@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useRef, useState } from "react"
+import React, { useCallback, useEffect, useRef, useState } from "react"
 import { useActiveSection, type SectionId } from "./active-section-context"
 import { AnimatePresence, motion } from "motion/react"
 import type { Variants } from "motion/react"
@@ -23,23 +23,23 @@ export function ScrollContainer({ children }: ScrollContainerProps) {
   const activeIndex = SECTION_IDS.indexOf(activeSection)
   const sections = React.Children.toArray(children)
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     if (activeIndex < SECTION_IDS.length - 1) {
       setDirection(1)
       setActiveSection(SECTION_IDS[activeIndex + 1])
       setIsAnimating(true)
       setTimeout(() => setIsAnimating(false), 1000)
     }
-  }
+  }, [activeIndex, setActiveSection])
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     if (activeIndex > 0) {
       setDirection(-1)
       setActiveSection(SECTION_IDS[activeIndex - 1])
       setIsAnimating(true)
       setTimeout(() => setIsAnimating(false), 1000)
     }
-  }
+  }, [activeIndex, setActiveSection])
 
   const onWheel = (e: React.WheelEvent) => {
     if (isAnimating) return
@@ -138,7 +138,7 @@ export function ScrollContainer({ children }: ScrollContainerProps) {
     }
     window.addEventListener("keydown", handleKeyDown)
     return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [activeIndex, isAnimating])
+  }, [handleNext, handlePrev, isAnimating])
 
   return (
     <div

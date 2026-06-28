@@ -4,8 +4,101 @@
     "myName": "Bảo Trọng",
     "hi": "Xin chào",
     "i'm": "Tôi là",
-    "description": "Chào mừng bạn đến với trang portfolio của tôi, nơi bạn sẽ tìm thấy mọi thứ về tôi - từ sở thích, nhiếp ảnh, cuộc sống cá nhân, đến các tài nguyên tôi thường sử dụng, và tất nhiên là code.",
-    "hireMe": "Thuê tôi",
+    "role": "Lập trình viên Front-end",
+    "description": "Chào mừng bạn đến với portfolio của tôi, nơi bạn có thể tìm thấy mọi điều về tôi - từ sở thích, nhiếp ảnh, cuộc sống cá nhân, các tài nguyên tôi thường dùng, và tất nhiên là cả code.",
+    "hireMe": "Liên hệ tôi",
+    "github": "GitHub",
+    "scroll": "Cuộn",
     "languages": "Ngôn ngữ"
+  },
+  "AboutSection": {
+    "eyebrow": "Tôi là ai?",
+    "titlePrefix": "Tôi là",
+    "titleName": "Bảo Trọng",
+    "titleSuffix": "một lập trình viên Front-end",
+    "bio": "Tôi là một frontend developer yêu thích font chữ, màu sắc và việc tạo ra những website thân thiện. Tôi thích xây dựng giao diện đơn giản, sạch sẽ, dễ dùng và mang lại trải nghiệm mượt mà. Với tôi, điều quan trọng là làm mọi thứ đẹp hơn mà không khiến chúng trở nên phức tạp.",
+    "downloadCv": "Tải CV",
+    "imageAlt": "Bảo Trọng - Lập trình viên Front-end"
+  },
+  "SkillSection": {
+    "title": "Kỹ năng &",
+    "titleHighlight": "Chuyên môn",
+    "description": "Bộ công cụ kỹ thuật tôi dùng để xây dựng ứng dụng web dễ mở rộng, dễ tiếp cận và có hiệu năng tốt.",
+    "skills": {
+      "frontend": {
+        "category": "Nền tảng Frontend",
+        "items": ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"]
+      },
+      "styling": {
+        "category": "Giao diện & UI",
+        "items": ["Tailwind CSS", "Framer Motion", "SCSS", "Styled Components", "Shadcn UI"]
+      },
+      "architecture": {
+        "category": "Kiến trúc",
+        "items": ["Thiết kế responsive", "Micro-frontends", "Quản lý state", "Thiết kế component"]
+      },
+      "tools": {
+        "category": "Công cụ & Môi trường",
+        "items": ["Git", "VS Code", "Vercel", "Webpack", "Vite", "npm/yarn"]
+      },
+      "backend": {
+        "category": "Backend & Cơ sở dữ liệu",
+        "items": ["Node.js", "Express", "MongoDB", "PostgreSQL", "Firebase", "Supabase"]
+      },
+      "optimization": {
+        "category": "Tối ưu hóa",
+        "items": ["SEO", "Web Vitals", "Khả năng tiếp cận (a11y)", "Tối ưu hiệu năng"]
+      }
+    }
+  },
+  "ProjectSection": {
+    "title": "Dự án",
+    "titleHighlight": "Nổi bật",
+    "description": "Một số sản phẩm gần đây của tôi, thể hiện cách giải quyết sáng tạo và năng lực kỹ thuật.",
+    "preview": "Xem trước dự án",
+    "liveDemo": "Demo",
+    "githubRepository": "Kho GitHub",
+    "projects": {
+      "portfolio": {
+        "title": "Portfolio V2",
+        "description": "Website portfolio cá nhân với trải nghiệm điều hướng theo cuộn hiện đại, nhạc nền và animation mượt mà."
+      },
+      "commerce": {
+        "title": "Nền tảng E-Commerce",
+        "description": "Giải pháp thương mại điện tử full-stack với giỏ hàng, xác thực người dùng và tích hợp thanh toán."
+      },
+      "analytics": {
+        "title": "Analytics Dashboard",
+        "description": "Dashboard trực quan hóa dữ liệu thời gian thực để theo dõi hiệu năng hệ thống và chỉ số người dùng."
+      }
+    }
+  },
+  "ContactSection": {
+    "titlePrefix": "Hãy",
+    "titleHighlight": "Kết nối",
+    "description": "Tôi luôn sẵn sàng cho cơ hội mới, hợp tác, hoặc một cuộc trò chuyện thân thiện về web development.",
+    "email": "Email",
+    "location": "Địa điểm",
+    "locationValue": "Việt Nam",
+    "phone": "Điện thoại",
+    "sendMessage": "Gửi tin nhắn",
+    "name": "Tên",
+    "namePlaceholder": "Nguyễn Văn A",
+    "emailPlaceholder": "ban@example.com",
+    "message": "Tin nhắn",
+    "messagePlaceholder": "Tôi có thể giúp gì cho bạn?",
+    "submit": "Gửi tin nhắn"
+  },
+  "Dock": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "skills": "Kỹ năng",
+    "projects": "Dự án",
+    "contact": "Liên hệ",
+    "toggleNavigation": "Mở điều hướng",
+    "goTo": "Đi đến {section}"
+  },
+  "Common": {
+    "soon": "SẮP CÓ"
   }
 }

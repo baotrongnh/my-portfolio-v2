@@ -16,10 +16,7 @@ export function ActiveSectionProvider({ children }: { children: React.ReactNode 
   const [activeSection, setActiveSection] = useState<SectionId>("hero")
 
   const scrollToSection = useCallback((section: SectionId) => {
-    const element = document.getElementById(section)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
+    setActiveSection(section)
   }, [])
 
   return (

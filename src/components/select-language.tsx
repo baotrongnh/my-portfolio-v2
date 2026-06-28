@@ -10,6 +10,7 @@ import {
      SelectTrigger,
      SelectValue,
 } from "@/components/ui/select"
+import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
@@ -50,7 +51,7 @@ const listLanguages = [
           </svg>
      },
      {
-          label: '한국인', value: 'ko', icon: <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+          label: '한국어', value: 'ko', icon: <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
                <mask id="circleFlagsKo0">
                     <circle cx="256" cy="256" r="256" fill="#fff" />
                </mask>
@@ -65,7 +66,7 @@ const listLanguages = [
           </svg>
      },
      {
-          label: '中国人', value: 'cn', icon: <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+          label: '中文', value: 'cn', icon: <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
                <mask id="SVGuywqVbel">
                     <circle cx="256" cy="256" r="256" fill="#fff" />
                </mask>
@@ -94,17 +95,17 @@ const icon = <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" view
 </svg>
 
 export default function SelectLanguage() {
+     const t = useTranslations('HomePage')
      const [currentLocale, setCurrentLocale] = useState('en')
      const router = useRouter()
 
      useEffect(() => {
           getLocale().then(locale => setCurrentLocale(locale))
-     }, [currentLocale])
+     }, [])
 
      const handleChangeLanguage = async (newLocale: string) => {
           setCurrentLocale(newLocale)
-          const data = await setLocale(newLocale)
-          console.log(data);
+          await setLocale(newLocale)
           router.refresh()
      }
 
@@ -116,7 +117,7 @@ export default function SelectLanguage() {
                     </SelectTrigger>
                     <SelectContent>
                          <SelectGroup>
-                              <SelectLabel>Language</SelectLabel>
+                              <SelectLabel>{t('languages')}</SelectLabel>
                               {listLanguages?.map((language, index) => (
                                    <SelectItem value={language.value} key={index}>
                                         {language.icon}

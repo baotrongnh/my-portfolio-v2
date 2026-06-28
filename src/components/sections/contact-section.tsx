@@ -4,20 +4,22 @@ import { motion, useInView } from "motion/react"
 import { useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 export default function ContactSection() {
+  const t = useTranslations("ContactSection")
   const ref = useRef(null)
   const isInView = useInView(ref, { margin: "-20% 0px -20% 0px" })
 
   return (
-    <section id="contact" className="fullscreen-section relative pt-16 pb-28" style={{ perspective: "1000px" }}>
+    <section id="contact" className="fullscreen-section relative" style={{ perspective: "1000px" }}>
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-[50%] bg-primary/10 rounded-[100%] blur-[120px]" />
       </div>
 
-      <div className="can-scroll w-full h-full overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] z-10 relative">
-        <div ref={ref} className="container mx-auto px-4 w-full max-w-5xl min-h-full flex flex-col justify-center py-8">
+      <div className="can-scroll section-scroll z-10 relative">
+        <div ref={ref} className="container mx-auto px-4 w-full max-w-5xl min-h-full flex flex-col justify-center">
         <motion.div 
           initial={{ opacity: 0, y: -20, rotateX: -20, scale: 0.9 }}
           animate={isInView ? { opacity: 1, y: 0, rotateX: 0, scale: 1 } : { opacity: 0, y: -20, rotateX: -20, scale: 0.9 }}
@@ -25,10 +27,10 @@ export default function ContactSection() {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Let's <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent inline-block py-2 px-1">Connect</span>
+            {t("titlePrefix")} <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent inline-block py-2 px-1">{t("titleHighlight")}</span>
           </h2>
           <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
-            Open for opportunities, collaborations, or just a friendly chat about web development.
+            {t("description")}
           </p>
         </motion.div>
 
@@ -46,7 +48,7 @@ export default function ContactSection() {
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium text-muted-foreground mb-1">Email</h4>
+                  <h4 className="text-sm font-medium text-muted-foreground mb-1">{t("email")}</h4>
                   <a href="mailto:hello@baotrong.dev" className="text-lg font-semibold hover:text-primary transition-colors">
                     hello@baotrong.dev
                   </a>
@@ -58,8 +60,8 @@ export default function ContactSection() {
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium text-muted-foreground mb-1">Location</h4>
-                  <p className="text-lg font-semibold">Vietnam</p>
+                  <h4 className="text-sm font-medium text-muted-foreground mb-1">{t("location")}</h4>
+                  <p className="text-lg font-semibold">{t("locationValue")}</p>
                 </div>
               </div>
 
@@ -68,7 +70,7 @@ export default function ContactSection() {
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium text-muted-foreground mb-1">Phone</h4>
+                  <h4 className="text-sm font-medium text-muted-foreground mb-1">{t("phone")}</h4>
                   <a href="tel:+84123456789" className="text-lg font-semibold hover:text-primary transition-colors">
                     +84 123 456 789
                   </a>
@@ -103,37 +105,37 @@ export default function ContactSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <form className="glass-card p-6 md:p-8 flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>
-              <h3 className="text-2xl font-semibold mb-2">Send a message</h3>
+              <h3 className="text-2xl font-semibold mb-2">{t("sendMessage")}</h3>
               
               <div className="space-y-2">
-                <label className="text-sm font-medium text-muted-foreground pl-1">Name</label>
+                <label className="text-sm font-medium text-muted-foreground pl-1">{t("name")}</label>
                 <input 
                   type="text" 
-                  placeholder="John Doe"
+                  placeholder={t("namePlaceholder")}
                   className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-foreground"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-muted-foreground pl-1">Email</label>
+                <label className="text-sm font-medium text-muted-foreground pl-1">{t("email")}</label>
                 <input 
                   type="email" 
-                  placeholder="john@example.com"
+                  placeholder={t("emailPlaceholder")}
                   className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-foreground"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-muted-foreground pl-1">Message</label>
+                <label className="text-sm font-medium text-muted-foreground pl-1">{t("message")}</label>
                 <textarea 
-                  placeholder="How can I help you?"
+                  placeholder={t("messagePlaceholder")}
                   rows={4}
                   className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-foreground resize-none"
                 />
               </div>
 
               <Button className="w-full mt-2 gap-2 h-12 text-base rounded-xl">
-                Send Message <Send className="w-4 h-4" />
+                {t("submit")} <Send className="w-4 h-4" />
               </Button>
             </form>
           </motion.div>

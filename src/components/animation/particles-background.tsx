@@ -5,11 +5,9 @@ import Particles, { ParticlesProvider } from "@tsparticles/react";
 import { loadSlim } from "tsparticles-slim";
 import type { Engine } from "@tsparticles/engine";
 import type { Engine as SlimEngine } from "tsparticles-engine";
-import { useTheme } from "next-themes";
 
 export default function ParticlesBackground() {
-  const { resolvedTheme } = useTheme();
-  const particleColor = resolvedTheme === "dark" ? "#ffffff" : "#000000";
+  const particleColor = "#ffffff";
 
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine as unknown as SlimEngine);

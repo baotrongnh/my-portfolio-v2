@@ -4,8 +4,101 @@
     "myName": "Bao Trong",
     "hi": "Hi",
     "i'm": "I'm",
-    "description": "Welcome to my portfolio page, where you'll find everything about me – from my hobbies, photography, personal life, to the resources I often use, and of course, code.",
+    "role": "Front-end developer",
+    "description": "Welcome to my portfolio page, where you'll find everything about me - from my hobbies, photography, personal life, to the resources I often use, and of course, code.",
     "hireMe": "Hire me",
+    "github": "GitHub",
+    "scroll": "Scroll",
     "languages": "Languages"
+  },
+  "AboutSection": {
+    "eyebrow": "Who am I?",
+    "titlePrefix": "I'm",
+    "titleName": "Bao Trong",
+    "titleSuffix": "a Front-end Developer",
+    "bio": "I'm a frontend developer who loves working with fonts, colors, and making sure websites feel welcoming. I enjoy creating simple, clean designs that are easy to use and help people have a smooth experience. It's all about making things look nice without overcomplicating them!",
+    "downloadCv": "Download CV",
+    "imageAlt": "Bao Trong - Front-end Developer"
+  },
+  "SkillSection": {
+    "title": "Skills &",
+    "titleHighlight": "Expertise",
+    "description": "My technical toolkit for building scalable, accessible, and performant web applications.",
+    "skills": {
+      "frontend": {
+        "category": "Frontend Core",
+        "items": ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"]
+      },
+      "styling": {
+        "category": "Styling & UI",
+        "items": ["Tailwind CSS", "Framer Motion", "SCSS", "Styled Components", "Shadcn UI"]
+      },
+      "architecture": {
+        "category": "Architecture",
+        "items": ["Responsive Design", "Micro-frontends", "State Management", "Component Design"]
+      },
+      "tools": {
+        "category": "Tools & Env",
+        "items": ["Git", "VS Code", "Vercel", "Webpack", "Vite", "npm/yarn"]
+      },
+      "backend": {
+        "category": "Backend & DB",
+        "items": ["Node.js", "Express", "MongoDB", "PostgreSQL", "Firebase", "Supabase"]
+      },
+      "optimization": {
+        "category": "Optimization",
+        "items": ["SEO", "Web Vitals", "Accessibility (a11y)", "Performance Tuning"]
+      }
+    }
+  },
+  "ProjectSection": {
+    "title": "Featured",
+    "titleHighlight": "Projects",
+    "description": "A selection of my recent work, highlighting creative solutions and technical capabilities.",
+    "preview": "Project Preview",
+    "liveDemo": "Live Demo",
+    "githubRepository": "GitHub Repository",
+    "projects": {
+      "portfolio": {
+        "title": "Portfolio V2",
+        "description": "My personal portfolio website featuring modern scroll-based navigation, background music, and smooth animations."
+      },
+      "commerce": {
+        "title": "E-Commerce Platform",
+        "description": "A full-stack e-commerce solution with cart management, user authentication, and payment processing integration."
+      },
+      "analytics": {
+        "title": "Analytics Dashboard",
+        "description": "A real-time data visualization dashboard for monitoring system performance and user metrics."
+      }
+    }
+  },
+  "ContactSection": {
+    "titlePrefix": "Let's",
+    "titleHighlight": "Connect",
+    "description": "Open for opportunities, collaborations, or just a friendly chat about web development.",
+    "email": "Email",
+    "location": "Location",
+    "locationValue": "Vietnam",
+    "phone": "Phone",
+    "sendMessage": "Send a message",
+    "name": "Name",
+    "namePlaceholder": "John Doe",
+    "emailPlaceholder": "john@example.com",
+    "message": "Message",
+    "messagePlaceholder": "How can I help you?",
+    "submit": "Send Message"
+  },
+  "Dock": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "toggleNavigation": "Toggle navigation",
+    "goTo": "Go to {section}"
+  },
+  "Common": {
+    "soon": "SOON"
   }
 }

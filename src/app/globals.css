@@ -124,6 +124,9 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   * {
     @apply border-border outline-ring/50;
   }
@@ -146,11 +149,24 @@
 
 /* ─── Fullscreen Sections ────────────────────────────────── */
 .fullscreen-section {
-  min-height: 100dvh;
+  height: 100dvh;
   width: 100%;
   position: relative;
   overflow: hidden;
   perspective: 1000px;
+}
+
+.section-scroll {
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-block: clamp(4rem, 8vh, 6rem) 8rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.section-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 
