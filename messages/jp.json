@@ -4,8 +4,101 @@
     "myName": "バオ・チョン",
     "hi": "こんにちは",
     "i'm": "私は",
-    "description": "私のポートフォリオページへようこそ。趣味、写真、私生活、よく使うリソース、そしてもちろんコードなど、私に関するすべてを見つけることができます。",
-    "hireMe": "採用する",
+    "role": "フロントエンド開発者",
+    "description": "私のポートフォリオへようこそ。趣味、写真、日常、よく使うリソース、そしてもちろんコードまで、私についての情報をまとめています。",
+    "hireMe": "相談する",
+    "github": "GitHub",
+    "scroll": "スクロール",
     "languages": "言語"
+  },
+  "AboutSection": {
+    "eyebrow": "私は誰？",
+    "titlePrefix": "私は",
+    "titleName": "バオ・チョン",
+    "titleSuffix": "フロントエンド開発者です",
+    "bio": "私はフォントや色、そして親しみやすいウェブ体験を作ることが好きなフロントエンド開発者です。シンプルで使いやすく、心地よいインターフェースを作ることを大切にしています。複雑にしすぎず、美しく整えることが私のこだわりです。",
+    "downloadCv": "CVをダウンロード",
+    "imageAlt": "バオ・チョン - フロントエンド開発者"
+  },
+  "SkillSection": {
+    "title": "スキル &",
+    "titleHighlight": "専門性",
+    "description": "拡張性、アクセシビリティ、パフォーマンスに優れたWebアプリを作るための技術スタックです。",
+    "skills": {
+      "frontend": {
+        "category": "Frontend Core",
+        "items": ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"]
+      },
+      "styling": {
+        "category": "Styling & UI",
+        "items": ["Tailwind CSS", "Framer Motion", "SCSS", "Styled Components", "Shadcn UI"]
+      },
+      "architecture": {
+        "category": "アーキテクチャ",
+        "items": ["レスポンシブデザイン", "Micro-frontends", "状態管理", "コンポーネント設計"]
+      },
+      "tools": {
+        "category": "ツール & 環境",
+        "items": ["Git", "VS Code", "Vercel", "Webpack", "Vite", "npm/yarn"]
+      },
+      "backend": {
+        "category": "Backend & DB",
+        "items": ["Node.js", "Express", "MongoDB", "PostgreSQL", "Firebase", "Supabase"]
+      },
+      "optimization": {
+        "category": "最適化",
+        "items": ["SEO", "Web Vitals", "アクセシビリティ (a11y)", "パフォーマンス改善"]
+      }
+    }
+  },
+  "ProjectSection": {
+    "title": "注目",
+    "titleHighlight": "プロジェクト",
+    "description": "最近の制作物から、創造的な解決力と技術力が伝わるものを選びました。",
+    "preview": "プロジェクトプレビュー",
+    "liveDemo": "デモ",
+    "githubRepository": "GitHub リポジトリ",
+    "projects": {
+      "portfolio": {
+        "title": "Portfolio V2",
+        "description": "スクロールベースのモダンなナビゲーション、BGM、滑らかなアニメーションを備えた個人ポートフォリオです。"
+      },
+      "commerce": {
+        "title": "E-Commerce Platform",
+        "description": "カート管理、ユーザー認証、決済連携を備えたフルスタックのECソリューションです。"
+      },
+      "analytics": {
+        "title": "Analytics Dashboard",
+        "description": "システム性能やユーザー指標を監視するためのリアルタイムデータ可視化ダッシュボードです。"
+      }
+    }
+  },
+  "ContactSection": {
+    "titlePrefix": "つながり",
+    "titleHighlight": "ましょう",
+    "description": "新しい機会、コラボレーション、またはWeb開発についての気軽な会話を歓迎しています。",
+    "email": "メール",
+    "location": "所在地",
+    "locationValue": "ベトナム",
+    "phone": "電話",
+    "sendMessage": "メッセージを送る",
+    "name": "名前",
+    "namePlaceholder": "山田 太郎",
+    "emailPlaceholder": "taro@example.com",
+    "message": "メッセージ",
+    "messagePlaceholder": "どのようにお手伝いできますか？",
+    "submit": "送信"
+  },
+  "Dock": {
+    "home": "ホーム",
+    "about": "自己紹介",
+    "skills": "スキル",
+    "projects": "プロジェクト",
+    "contact": "連絡先",
+    "toggleNavigation": "ナビゲーションを開く",
+    "goTo": "{section}へ移動"
+  },
+  "Common": {
+    "soon": "近日公開"
   }
 }

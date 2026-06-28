@@ -4,8 +4,101 @@
     "myName": "Bao Trong",
     "hi": "Salut",
     "i'm": "Je suis",
-    "description": "Bienvenue sur ma page portfolio, où vous trouverez tout sur moi - de mes passe-temps, photographie, vie personnelle, aux ressources que j'utilise souvent, et bien sûr, le code.",
-    "hireMe": "Embauchez-moi",
+    "role": "Développeur Front-end",
+    "description": "Bienvenue sur mon portfolio, où vous trouverez tout ce qui me concerne - mes passions, la photographie, ma vie personnelle, les ressources que j'utilise souvent, et bien sûr, le code.",
+    "hireMe": "Me contacter",
+    "github": "GitHub",
+    "scroll": "Défiler",
     "languages": "Langues"
+  },
+  "AboutSection": {
+    "eyebrow": "Qui suis-je ?",
+    "titlePrefix": "Je suis",
+    "titleName": "Bao Trong",
+    "titleSuffix": "développeur Front-end",
+    "bio": "Je suis un développeur frontend qui aime travailler avec les polices, les couleurs et créer des sites accueillants. J'aime concevoir des interfaces simples, propres et faciles à utiliser, pour offrir une expérience fluide. Pour moi, l'objectif est de rendre les choses belles sans les compliquer.",
+    "downloadCv": "Télécharger le CV",
+    "imageAlt": "Bao Trong - Développeur Front-end"
+  },
+  "SkillSection": {
+    "title": "Compétences &",
+    "titleHighlight": "Expertise",
+    "description": "Ma boîte à outils technique pour créer des applications web évolutives, accessibles et performantes.",
+    "skills": {
+      "frontend": {
+        "category": "Base Frontend",
+        "items": ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"]
+      },
+      "styling": {
+        "category": "Style & UI",
+        "items": ["Tailwind CSS", "Framer Motion", "SCSS", "Styled Components", "Shadcn UI"]
+      },
+      "architecture": {
+        "category": "Architecture",
+        "items": ["Design responsive", "Micro-frontends", "Gestion d'état", "Conception de composants"]
+      },
+      "tools": {
+        "category": "Outils & Environnement",
+        "items": ["Git", "VS Code", "Vercel", "Webpack", "Vite", "npm/yarn"]
+      },
+      "backend": {
+        "category": "Backend & Base de données",
+        "items": ["Node.js", "Express", "MongoDB", "PostgreSQL", "Firebase", "Supabase"]
+      },
+      "optimization": {
+        "category": "Optimisation",
+        "items": ["SEO", "Web Vitals", "Accessibilité (a11y)", "Optimisation des performances"]
+      }
+    }
+  },
+  "ProjectSection": {
+    "title": "Projets",
+    "titleHighlight": "Sélectionnés",
+    "description": "Une sélection de mes travaux récents, mettant en avant des solutions créatives et mes capacités techniques.",
+    "preview": "Aperçu du projet",
+    "liveDemo": "Démo",
+    "githubRepository": "Dépôt GitHub",
+    "projects": {
+      "portfolio": {
+        "title": "Portfolio V2",
+        "description": "Mon portfolio personnel avec une navigation moderne basée sur le scroll, de la musique de fond et des animations fluides."
+      },
+      "commerce": {
+        "title": "Plateforme E-Commerce",
+        "description": "Une solution e-commerce full-stack avec gestion du panier, authentification utilisateur et intégration du paiement."
+      },
+      "analytics": {
+        "title": "Tableau de bord analytique",
+        "description": "Un tableau de bord de visualisation de données en temps réel pour suivre les performances du système et les métriques utilisateur."
+      }
+    }
+  },
+  "ContactSection": {
+    "titlePrefix": "Entrons en",
+    "titleHighlight": "Contact",
+    "description": "Ouvert aux opportunités, collaborations ou simplement à une discussion amicale autour du développement web.",
+    "email": "Email",
+    "location": "Localisation",
+    "locationValue": "Vietnam",
+    "phone": "Téléphone",
+    "sendMessage": "Envoyer un message",
+    "name": "Nom",
+    "namePlaceholder": "Jean Dupont",
+    "emailPlaceholder": "jean@example.com",
+    "message": "Message",
+    "messagePlaceholder": "Comment puis-je vous aider ?",
+    "submit": "Envoyer"
+  },
+  "Dock": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact",
+    "toggleNavigation": "Ouvrir la navigation",
+    "goTo": "Aller à {section}"
+  },
+  "Common": {
+    "soon": "BIENTÔT"
   }
 }

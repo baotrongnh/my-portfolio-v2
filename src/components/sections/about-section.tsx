@@ -2,16 +2,18 @@
 
 import { Button } from "@/components/ui/button"
 import { Tilt } from "@/components/ui/tilt"
+import { useTranslations } from "next-intl"
 import { motion, useInView } from "motion/react"
 import Image from "next/image"
 import { useRef } from "react"
 
 export default function AboutSection() {
+  const t = useTranslations("AboutSection")
   const ref = useRef(null)
   const isInView = useInView(ref, { margin: "-20% 0px -20% 0px" })
 
   return (
-    <section id="about" className="fullscreen-section relative pt-16 pb-28">
+    <section id="about" className="fullscreen-section relative">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div 
@@ -26,8 +28,8 @@ export default function AboutSection() {
         />
       </div>
 
-      <div className="can-scroll w-full h-full overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] z-10 relative">
-        <div ref={ref} className="container mx-auto px-4 w-full max-w-5xl min-h-full flex flex-col justify-center py-8">
+      <div className="can-scroll section-scroll z-10 relative">
+        <div ref={ref} className="container mx-auto px-4 w-full max-w-5xl min-h-full flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Avatar side */}
           <motion.div 
@@ -39,7 +41,7 @@ export default function AboutSection() {
             <div className="relative w-[280px] sm:w-[350px] lg:w-[400px] aspect-square rounded-2xl border border-white/10 shadow-2xl">
               <Tilt rotationFactor={8} isRevese className="w-full h-full rounded-2xl overflow-hidden">
                 <Image
-                  alt="Bao Trong - Front-end Developer"
+                  alt={t("imageAlt")}
                   width={500}
                   height={500}
                   src="/images/avatar-2.jpg"
@@ -57,24 +59,21 @@ export default function AboutSection() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="col-span-1 lg:col-span-7 flex flex-col justify-center text-center lg:text-left"
           >
-            <h2 className="text-xl md:text-2xl font-bold text-primary mb-2 tracking-wider uppercase">Who am i?</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-primary mb-2 tracking-wider uppercase">{t("eyebrow")}</h2>
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-balance mb-6">
-              I'm <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent inline-block py-2 px-1">Bao Trong</span>,<br/> a Front-end Developer
+              {t("titlePrefix")} <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent inline-block py-2 px-1">{t("titleName")}</span>,<br/> {t("titleSuffix")}
             </h3>
             
             <div className="glass-card p-6 md:p-8 mb-8 text-left">
               <p className="leading-relaxed text-muted-foreground text-sm sm:text-base md:text-lg">
-                "I'm a frontend developer who loves working with fonts, colors, and making sure
-                websites feel welcoming. I enjoy creating simple, clean designs that are easy to use and
-                help people have a smooth experience. It's all about making things look nice without
-                overcomplicating them!"
+                &quot;{t("bio")}&quot;
               </p>
             </div>
 
             <div className="flex justify-center lg:justify-start">
               <a href="/CV_NguyenHuynhBaoTrong.pdf" download="CV_NguyenHuynhBaoTrong" aria-label="Download CV">
                 <Button size="lg" className="rounded-full px-8 hover:scale-105 transition-transform duration-300">
-                  Download CV
+                  {t("downloadCv")}
                 </Button>
               </a>
             </div>

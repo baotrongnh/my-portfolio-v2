@@ -5,7 +5,9 @@ import { BackgroundMusic } from "@/components/layout/background-music";
 import ParticlesBackground from "@/components/animation/particles-background";
 import SplashLayout from "@/components/splash-screen";
 import 'aos/dist/aos.css';
-import type { Metadata } from "next";
+import { absoluteUrl, siteConfig } from "@/lib/site";
+import type { Metadata, Viewport } from "next";
+import { getLocale, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -22,38 +24,89 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NHBT",
-  description: "PORTFOLIO WEB",
+  metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.shortName,
+  title: {
+    default: `${siteConfig.name} | ${siteConfig.role}`,
+    template: `%s | ${siteConfig.shortName}`,
+  },
+  description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: siteConfig.locale,
+    url: siteConfig.url,
+    siteName: `${siteConfig.name} Portfolio`,
+    title: `${siteConfig.name} | ${siteConfig.role}`,
+    description: siteConfig.description,
+    images: [
+      {
+        url: siteConfig.image,
+        width: 1200,
+        height: 1200,
+        alt: `${siteConfig.name} portrait`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} | ${siteConfig.role}`,
+    description: siteConfig.description,
+    images: [absoluteUrl(siteConfig.image)],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  category: "portfolio",
 };
 
-export default function RootLayout({
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#17151c",
+};
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} className="dark" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <ActiveSectionProvider>
-            <ParticlesBackground />
-            <SplashLayout>
-              <NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <ThemeProvider defaultTheme="dark">
+            <ActiveSectionProvider>
+              <ParticlesBackground />
+              <SplashLayout>
                 {children}
-              </NextIntlClientProvider>
-            </SplashLayout>
-            <AOSAnimate />
-            <Dock />
-            <BackgroundMusic />
-          </ActiveSectionProvider>
-        </ThemeProvider>
+              </SplashLayout>
+              <AOSAnimate />
+              <Dock />
+              <BackgroundMusic />
+            </ActiveSectionProvider>
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

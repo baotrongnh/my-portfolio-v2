@@ -19,7 +19,7 @@ export default function Hero() {
                          {t("hi")}, {t("i'm")} <b className='text-primary'>{t("myName")}</b>
                     </p>
                     <h1 className="py-5 text-3xl md:text-4xl font-semibold">
-                         Front-end developer
+                         {t("role")}
                     </h1>
                     <p className='px-4 md:px-[20%] lg:px-[25%] antialiased opacity-85 text-muted-foreground text-lg'>
                          {t("description")}
@@ -35,7 +35,7 @@ export default function Hero() {
                          <Magnetic>
                               <LinkPreview url="https://github.com/baotrongnh" openInNewTab={true}>
                                    <Button className='duration-200 px-10' variant="outline" size='lg'>
-                                        Github
+                                        {t("github")}
                                    </Button>
                               </LinkPreview>
                          </Magnetic>
@@ -48,7 +48,7 @@ export default function Hero() {
                     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                     className="absolute bottom-28 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-70 z-50 pointer-events-none"
                >
-                    <span className="text-xs uppercase tracking-widest font-medium text-muted-foreground">Scroll</span>
+                    <span className="text-xs uppercase tracking-widest font-medium text-muted-foreground">{t("scroll")}</span>
                     <ChevronDown className="w-6 h-6 text-primary" />
                </motion.div>
           </section>

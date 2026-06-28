@@ -1,11 +1,104 @@
 {
   "HomePage": {
-    "title": "你好世界！",
+    "title": "你好，世界！",
     "myName": "宝忠",
     "hi": "你好",
     "i'm": "我是",
-    "description": "欢迎来到我的作品集页面，在这里你可以找到关于我的一切 - 从我的爱好、摄影、个人生活，到我经常使用的资源，当然还有代码。",
-    "hireMe": "雇用我",
+    "role": "前端开发者",
+    "description": "欢迎来到我的作品集页面。在这里你可以了解我的兴趣、摄影、个人生活、常用资源，当然还有代码。",
+    "hireMe": "联系我",
+    "github": "GitHub",
+    "scroll": "滚动",
     "languages": "语言"
+  },
+  "AboutSection": {
+    "eyebrow": "我是谁？",
+    "titlePrefix": "我是",
+    "titleName": "宝忠",
+    "titleSuffix": "一名前端开发者",
+    "bio": "我是一名前端开发者，喜欢研究字体、颜色，并打造让人感觉友好的网站。我喜欢创建简单、干净、易用的界面，让用户拥有顺畅的体验。对我来说，重点是在不过度复杂化的前提下，让产品变得更好看。",
+    "downloadCv": "下载 CV",
+    "imageAlt": "宝忠 - 前端开发者"
+  },
+  "SkillSection": {
+    "title": "技能 &",
+    "titleHighlight": "专长",
+    "description": "我用于构建可扩展、可访问且高性能 Web 应用的技术工具箱。",
+    "skills": {
+      "frontend": {
+        "category": "Frontend Core",
+        "items": ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"]
+      },
+      "styling": {
+        "category": "Styling & UI",
+        "items": ["Tailwind CSS", "Framer Motion", "SCSS", "Styled Components", "Shadcn UI"]
+      },
+      "architecture": {
+        "category": "架构",
+        "items": ["响应式设计", "Micro-frontends", "状态管理", "组件设计"]
+      },
+      "tools": {
+        "category": "工具 & 环境",
+        "items": ["Git", "VS Code", "Vercel", "Webpack", "Vite", "npm/yarn"]
+      },
+      "backend": {
+        "category": "Backend & DB",
+        "items": ["Node.js", "Express", "MongoDB", "PostgreSQL", "Firebase", "Supabase"]
+      },
+      "optimization": {
+        "category": "优化",
+        "items": ["SEO", "Web Vitals", "可访问性 (a11y)", "性能优化"]
+      }
+    }
+  },
+  "ProjectSection": {
+    "title": "精选",
+    "titleHighlight": "项目",
+    "description": "这里展示了我近期的一些作品，突出创意解决方案和技术能力。",
+    "preview": "项目预览",
+    "liveDemo": "在线演示",
+    "githubRepository": "GitHub 仓库",
+    "projects": {
+      "portfolio": {
+        "title": "Portfolio V2",
+        "description": "我的个人作品集网站，包含现代化的滚动导航、背景音乐和流畅动画。"
+      },
+      "commerce": {
+        "title": "E-Commerce Platform",
+        "description": "一个全栈电商解决方案，包含购物车管理、用户认证和支付集成。"
+      },
+      "analytics": {
+        "title": "Analytics Dashboard",
+        "description": "用于监控系统性能和用户指标的实时数据可视化仪表盘。"
+      }
+    }
+  },
+  "ContactSection": {
+    "titlePrefix": "一起",
+    "titleHighlight": "联系",
+    "description": "欢迎新的机会、合作，或者关于 Web 开发的轻松交流。",
+    "email": "邮箱",
+    "location": "位置",
+    "locationValue": "越南",
+    "phone": "电话",
+    "sendMessage": "发送消息",
+    "name": "姓名",
+    "namePlaceholder": "张三",
+    "emailPlaceholder": "you@example.com",
+    "message": "消息",
+    "messagePlaceholder": "我可以怎样帮助你？",
+    "submit": "发送"
+  },
+  "Dock": {
+    "home": "首页",
+    "about": "关于",
+    "skills": "技能",
+    "projects": "项目",
+    "contact": "联系",
+    "toggleNavigation": "打开导航",
+    "goTo": "前往{section}"
+  },
+  "Common": {
+    "soon": "即将推出"
   }
 }
