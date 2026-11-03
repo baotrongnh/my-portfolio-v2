@@ -4,82 +4,174 @@
     "myName": "Bảo Trọng",
     "hi": "Xin chào",
     "i'm": "Tôi là",
-    "role": "Lập trình viên Front-end",
-    "description": "Chào mừng bạn đến với portfolio của tôi, nơi bạn có thể tìm thấy mọi điều về tôi - từ sở thích, nhiếp ảnh, cuộc sống cá nhân, các tài nguyên tôi thường dùng, và tất nhiên là cả code.",
-    "hireMe": "Liên hệ tôi",
+    "role": "Full-stack Developer",
+    "description": "Tốt nghiệp Kỹ thuật phần mềm tại FPT University với kinh nghiệm thực tế trong phát triển web full-stack bằng ReactJS, Next.js, Node.js và NestJS.",
+    "hireMe": "Khám phá thêm",
     "github": "GitHub",
     "scroll": "Cuộn",
     "languages": "Ngôn ngữ"
   },
   "AboutSection": {
-    "eyebrow": "Tôi là ai?",
+    "eyebrow": "Về tôi",
     "titlePrefix": "Tôi là",
-    "titleName": "Bảo Trọng",
-    "titleSuffix": "một lập trình viên Front-end",
-    "bio": "Tôi là một frontend developer yêu thích font chữ, màu sắc và việc tạo ra những website thân thiện. Tôi thích xây dựng giao diện đơn giản, sạch sẽ, dễ dùng và mang lại trải nghiệm mượt mà. Với tôi, điều quan trọng là làm mọi thứ đẹp hơn mà không khiến chúng trở nên phức tạp.",
+    "titleName": "Nguyễn Huỳnh Bảo Trọng",
+    "titleSuffix": "một Full-stack Developer",
+    "bio": "Tốt nghiệp Kỹ thuật phần mềm tại FPT University, có kinh nghiệm full-stack với ReactJS, Next.js, Node.js và NestJS. Tôi xây dựng giao diện responsive, backend đáng tin cậy và từng làm việc với API, database cùng IoT.",
     "downloadCv": "Tải CV",
-    "imageAlt": "Bảo Trọng - Lập trình viên Front-end"
+    "imageAlt": "Nguyễn Huỳnh Bảo Trọng - Full-stack Developer",
+    "location": "Thành phố Hồ Chí Minh, Việt Nam"
+  },
+  "ExperienceSection": {
+    "eyebrow": "Kinh nghiệm làm việc",
+    "title": "Hành trình nghề nghiệp",
+    "titleHighlight": "đến nay",
+    "description": "Kinh nghiệm phát triển web full-stack với giao diện, API, cơ sở dữ liệu và IoT.",
+    "experienceTitle": "Kinh nghiệm làm việc",
+    "viewDetails": "Xem chi tiết",
+    "responsibilities": "Trách nhiệm",
+    "technologies": "Công nghệ",
+    "experience": [
+      {
+        "company": "FPT Software",
+        "role": "Front-end Developer Intern",
+        "period": "Tháng 1/2025 – Tháng 4/2025",
+        "description": "Xây dựng giao diện responsive với VueJS, NuxtJS, tích hợp REST API và cải thiện tương thích đa thiết bị.",
+        "responsibilities": [
+          "Phát triển và duy trì giao diện web responsive bằng VueJS và NuxtJS.",
+          "Tích hợp RESTful API và phối hợp với đội ngũ backend để đảm bảo dữ liệu được truyền tải liền mạch.",
+          "Phát hiện và xử lý các vấn đề giao diện.",
+          "Cải thiện khả năng tương thích trên nhiều thiết bị và trình duyệt.",
+          "Sử dụng công cụ phát triển hiện đại để duy trì chất lượng mã nguồn và hiệu quả công việc."
+        ],
+        "stack": "VueJS, NuxtJS, JavaScript, RESTful APIs"
+      },
+      {
+        "company": "MindX",
+        "role": "Coding Instructor",
+        "period": "Tháng 5/2026 – Hiện tại",
+        "description": "Giảng dạy lập trình và robotics qua bài tập thực hành, hướng dẫn học sinh coding và tư duy giải quyết vấn đề.",
+        "responsibilities": [
+          "Giảng dạy kiến thức lập trình và kỹ năng thực hành với Python, JavaScript, HTML, CSS và robotics.",
+          "Hướng dẫn học sinh phát triển tư duy logic và kỹ năng giải quyết vấn đề qua các dự án thực hành.",
+          "Hỗ trợ học sinh trong các bài tập lập trình và hoạt động thực hành.",
+          "Phối hợp với các giảng viên khác để chuẩn bị bài học và theo dõi tiến độ học tập."
+        ],
+        "stack": "Python, JavaScript, HTML, CSS, Robotics"
+      }
+    ]
   },
   "SkillSection": {
     "title": "Kỹ năng &",
     "titleHighlight": "Chuyên môn",
-    "description": "Bộ công cụ kỹ thuật tôi dùng để xây dựng ứng dụng web dễ mở rộng, dễ tiếp cận và có hiệu năng tốt.",
+    "description": "Các công nghệ và quy trình tôi sử dụng để thiết kế, xây dựng và triển khai sản phẩm số full-stack.",
     "skills": {
+      "languages": {
+        "category": "Ngôn ngữ lập trình",
+        "items": ["JavaScript", "TypeScript", "Java", "C/C++"]
+      },
       "frontend": {
-        "category": "Nền tảng Frontend",
-        "items": ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"]
+        "category": "Phát triển Frontend",
+        "items": ["ReactJS", "Next.js", "React Native", "VueJS", "NuxtJS", "HTML5", "CSS3", "Tailwind CSS"]
       },
       "styling": {
-        "category": "Giao diện & UI",
-        "items": ["Tailwind CSS", "Framer Motion", "SCSS", "Styled Components", "Shadcn UI"]
-      },
-      "architecture": {
-        "category": "Kiến trúc",
-        "items": ["Thiết kế responsive", "Micro-frontends", "Quản lý state", "Thiết kế component"]
-      },
-      "tools": {
-        "category": "Công cụ & Môi trường",
-        "items": ["Git", "VS Code", "Vercel", "Webpack", "Vite", "npm/yarn"]
+        "category": "UI Libraries & Styling",
+        "items": ["shadcn/ui", "Ant Design", "Mantine UI", "Bootstrap"]
       },
       "backend": {
-        "category": "Backend & Cơ sở dữ liệu",
-        "items": ["Node.js", "Express", "MongoDB", "PostgreSQL", "Firebase", "Supabase"]
+        "category": "Phát triển Backend",
+        "items": ["Node.js", "NestJS", "ExpressJS", "RESTful API Development"]
       },
-      "optimization": {
-        "category": "Tối ưu hóa",
-        "items": ["SEO", "Web Vitals", "Khả năng tiếp cận (a11y)", "Tối ưu hiệu năng"]
+      "databases": {
+        "category": "Cơ sở dữ liệu & Caching",
+        "items": ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
+      },
+      "state": {
+        "category": "Quản lý trạng thái",
+        "items": ["Zustand", "Redux"]
+      },
+      "ai": {
+        "category": "AI & Công cụ phát triển",
+        "items": ["Cursor", "GitHub Copilot", "Antigravity", "Prompt Engineering", "AI-assisted Development"]
+      },
+      "tools": {
+        "category": "Công cụ & Công nghệ khác",
+        "items": ["Git", "GitHub", "Postman", "Docker", "Figma", "Arduino / IoT"]
       }
     }
   },
   "ProjectSection": {
     "title": "Dự án",
     "titleHighlight": "Nổi bật",
-    "description": "Một số sản phẩm gần đây của tôi, thể hiện cách giải quyết sáng tạo và năng lực kỹ thuật.",
+    "description": "Lựa chọn các dự án phản ánh kinh nghiệm full-stack, khả năng giải quyết vấn đề thực tế và đóng góp sản phẩm.",
     "preview": "Xem trước dự án",
     "liveDemo": "Demo",
     "githubRepository": "Kho GitHub",
+    "viewMore": "Xem thêm dự án",
+    "allProjects": "Tất cả dự án",
+    "allProjectsDescription": "Xem chi tiết từng dự án, vai trò, công nghệ sử dụng và liên kết.",
+    "viewProject": "Xem chi tiết dự án",
+    "backToProjects": "Quay lại tất cả dự án",
+    "technologies": "Công nghệ",
     "projects": {
-      "portfolio": {
-        "title": "Portfolio V2",
-        "description": "Website portfolio cá nhân với trải nghiệm điều hướng theo cuộn hiện đại, nhạc nền và animation mượt mà."
+      "homeiq": {
+        "title": "HomeIQ",
+        "role": "Team Leader & Full-stack Developer",
+        "duration": "Tháng 1/2026 – Tháng 4/2026",
+        "description": "Nền tảng quản lý căn hộ dịch vụ thông minh tích hợp điều khiển thiết bị IoT thông qua ứng dụng di động.",
+        "technologies": ["Next.js", "NestJS", "PostgreSQL", "Redis", "React Native", "Arduino"],
+        "gradient": "from-violet-500/20 to-blue-500/20",
+        "link": "https://homeiq-gamma.vercel.app",
+        "github": ""
       },
-      "commerce": {
-        "title": "Nền tảng E-Commerce",
-        "description": "Giải pháp thương mại điện tử full-stack với giỏ hàng, xác thực người dùng và tích hợp thanh toán."
+      "lensor": {
+        "title": "Lensor",
+        "role": "Full-stack Developer",
+        "duration": "Tháng 8/2025 – Tháng 11/2025",
+        "description": "Nền tảng mạng xã hội theo chủ đề nhiếp ảnh và marketplace kỹ thuật số nơi người chụp ảnh có thể chia sẻ nội dung và mua/bán preset ảnh kỹ thuật số.",
+        "technologies": ["Next.js", "NestJS", "MongoDB", "Redis", "Zustand"],
+        "gradient": "from-emerald-500/20 to-teal-500/20",
+        "link": "https://lensor-frontend.vercel.app",
+        "github": ""
       },
-      "analytics": {
-        "title": "Analytics Dashboard",
-        "description": "Dashboard trực quan hóa dữ liệu thời gian thực để theo dõi hiệu năng hệ thống và chỉ số người dùng."
+      "phu-cuong-logistics": {
+        "title": "Phu Cuong Logistics",
+        "role": "Full-stack Developer",
+        "duration": "Tháng 6/2026 – Tháng 7/2026",
+        "description": "Website B2B responsive giới thiệu sản phẩm nông nghiệp, dịch vụ xuất khẩu và năng lực logistics quốc tế.",
+        "technologies": ["Next.js", "Tailwind CSS", "NestJS", "MySQL"],
+        "gradient": "from-orange-500/20 to-red-500/20",
+        "link": "https://phucuonglogistic.com",
+        "github": ""
+      },
+      "fpt-mentor": {
+        "title": "FPT Mentor",
+        "role": "Team Leader & Front-end Developer",
+        "duration": "Tháng 1/2024 – Tháng 3/2024",
+        "description": "Nền tảng hướng dẫn sinh viên và đặt lịch hẹn được phát triển cho FPT University.",
+        "technologies": ["Next.js", "ExpressJS", "MySQL", "Zustand"],
+        "gradient": "from-cyan-500/20 to-sky-500/20",
+        "link": "",
+        "github": "https://github.com/baotrongnh/swp-mentor-booking-client"
+      },
+      "ours": {
+        "title": "Ours",
+        "role": "Full-stack Developer",
+        "duration": "Tháng 9/2026 – Tháng 10/2026",
+        "description": "Ứng dụng web cá nhân hóa cho các cặp đôi để quản lý ký ức chung, lên kế hoạch hoạt động và trao đổi thư kỹ thuật số riêng tư.",
+        "technologies": ["Next.js", "Tailwind CSS"],
+        "gradient": "from-pink-500/20 to-purple-500/20",
+        "link": "https://us-mocha-iota.vercel.app",
+        "github": ""
       }
     }
   },
   "ContactSection": {
     "titlePrefix": "Hãy",
     "titleHighlight": "Kết nối",
-    "description": "Tôi luôn sẵn sàng cho cơ hội mới, hợp tác, hoặc một cuộc trò chuyện thân thiện về web development.",
+    "description": "Sẵn sàng cho các cơ hội hợp tác hoặc một cuộc trò chuyện thân thiện về việc xây dựng sản phẩm kỹ thuật số có ý nghĩa.",
     "email": "Email",
     "location": "Địa điểm",
-    "locationValue": "Việt Nam",
+    "locationValue": "Thành phố Hồ Chí Minh, Việt Nam",
     "phone": "Điện thoại",
     "sendMessage": "Gửi tin nhắn",
     "name": "Tên",
@@ -92,6 +184,7 @@
   "Dock": {
     "home": "Trang chủ",
     "about": "Giới thiệu",
+    "experience": "Kinh nghiệm",
     "skills": "Kỹ năng",
     "projects": "Dự án",
     "contact": "Liên hệ",

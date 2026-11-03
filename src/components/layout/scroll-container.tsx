@@ -5,7 +5,7 @@ import { useActiveSection, type SectionId } from "./active-section-context"
 import { AnimatePresence, motion } from "motion/react"
 import type { Variants } from "motion/react"
 
-const SECTION_IDS: SectionId[] = ["hero", "about", "skill", "project", "contact"]
+const SECTION_IDS: SectionId[] = ["hero", "about", "experience", "skill", "project", "contact"]
 
 interface ScrollContainerProps {
   children: React.ReactNode
@@ -19,6 +19,7 @@ export function ScrollContainer({ children }: ScrollContainerProps) {
   const touchStartY = useRef(0)
   const touchStartAtBottom = useRef(true)
   const touchStartAtTop = useRef(true)
+  const touchStartedInDialog = useRef(false)
 
   const activeIndex = SECTION_IDS.indexOf(activeSection)
   const sections = React.Children.toArray(children)
@@ -45,6 +46,8 @@ export function ScrollContainer({ children }: ScrollContainerProps) {
     if (isAnimating) return
 
     const target = e.target as HTMLElement
+    if (target.closest('[data-slot="dialog-content"], [data-slot="dialog-overlay"]')) return
+
     const scrollable = target.closest('.can-scroll') as HTMLElement
 
     if (scrollable) {
@@ -65,6 +68,11 @@ export function ScrollContainer({ children }: ScrollContainerProps) {
     touchStartY.current = e.touches[0].clientY
 
     const target = e.target as HTMLElement
+    touchStartedInDialog.current = Boolean(
+      target.closest('[data-slot="dialog-content"], [data-slot="dialog-overlay"]'),
+    )
+    if (touchStartedInDialog.current) return
+
     const scrollable = target.closest('.can-scroll') as HTMLElement
 
     if (scrollable) {
@@ -78,6 +86,10 @@ export function ScrollContainer({ children }: ScrollContainerProps) {
   }
 
   const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartedInDialog.current) {
+      touchStartedInDialog.current = false
+      return
+    }
     if (isAnimating) return
 
     const touchEndY = e.changedTouches[0].clientY
@@ -132,7 +144,7 @@ export function ScrollContainer({ children }: ScrollContainerProps) {
   // Listen to keyboard up/down arrows
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (isAnimating) return
+      if (isAnimating || document.querySelector('[data-slot="dialog-content"][data-state="open"]')) return
       if (e.key === "ArrowDown" || e.key === "PageDown") handleNext()
       if (e.key === "ArrowUp" || e.key === "PageUp") handlePrev()
     }
