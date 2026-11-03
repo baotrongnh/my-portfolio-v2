@@ -18,36 +18,84 @@
     "titleSuffix": "フロントエンド開発者です",
     "bio": "私はフォントや色、そして親しみやすいウェブ体験を作ることが好きなフロントエンド開発者です。シンプルで使いやすく、心地よいインターフェースを作ることを大切にしています。複雑にしすぎず、美しく整えることが私のこだわりです。",
     "downloadCv": "CVをダウンロード",
-    "imageAlt": "バオ・チョン - フロントエンド開発者"
+    "imageAlt": "バオ・チョン - フロントエンド開発者",
+    "location": "ベトナム、ホーチミン市"
+  },
+  "ExperienceSection": {
+    "eyebrow": "職務経験",
+    "title": "これまでの",
+    "titleHighlight": "キャリア",
+    "description": "フロントエンド、API、データベース、IoTを含むフルスタックWeb開発の経験。",
+    "experienceTitle": "職務経験",
+    "viewDetails": "詳細を見る",
+    "responsibilities": "担当業務",
+    "technologies": "使用技術",
+    "experience": [
+      {
+        "company": "FPT Software",
+        "role": "フロントエンド開発インターン",
+        "period": "2025年1月 – 2025年4月",
+        "description": "VueJSとNuxtJSでレスポンシブUIを開発し、REST APIを統合。複数デバイスへの対応を改善しました。",
+        "responsibilities": [
+          "VueJSとNuxtJSを使用したレスポンシブなWebインターフェースの開発と保守。",
+          "RESTful APIを統合し、バックエンド開発者と連携して円滑なデータ連携を実現。",
+          "UIの問題を特定して修正。",
+          "複数のデバイスやブラウザーへの互換性を改善。",
+          "最新の開発ツールを活用し、コード品質と開発効率を維持。"
+        ],
+        "stack": "VueJS, NuxtJS, JavaScript, RESTful APIs"
+      },
+      {
+        "company": "MindX",
+        "role": "プログラミング講師",
+        "period": "2026年5月 – 現在",
+        "description": "実践的な授業を通じてプログラミングとロボティクスを教え、コーディングと問題解決を支援しています。",
+        "responsibilities": [
+          "Python、JavaScript、HTML、CSS、ロボティクスを使ったプログラミングの基礎と実践を指導。",
+          "実践的なプロジェクトを通じて、問題解決力と論理的思考力の育成を支援。",
+          "プログラミング演習や実践活動で学生をサポート。",
+          "他の講師と協力して授業を準備し、学習の進捗を確認。"
+        ],
+        "stack": "Python, JavaScript, HTML, CSS, Robotics"
+      }
+    ]
   },
   "SkillSection": {
     "title": "スキル &",
     "titleHighlight": "専門性",
     "description": "拡張性、アクセシビリティ、パフォーマンスに優れたWebアプリを作るための技術スタックです。",
     "skills": {
+      "languages": {
+        "category": "プログラミング言語",
+        "items": ["JavaScript", "TypeScript", "Java", "C/C++"]
+      },
       "frontend": {
-        "category": "Frontend Core",
-        "items": ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"]
+        "category": "Frontend 開発",
+        "items": ["ReactJS", "Next.js", "React Native", "VueJS", "NuxtJS", "HTML5", "CSS3", "Tailwind CSS"]
       },
       "styling": {
-        "category": "Styling & UI",
-        "items": ["Tailwind CSS", "Framer Motion", "SCSS", "Styled Components", "Shadcn UI"]
-      },
-      "architecture": {
-        "category": "アーキテクチャ",
-        "items": ["レスポンシブデザイン", "Micro-frontends", "状態管理", "コンポーネント設計"]
-      },
-      "tools": {
-        "category": "ツール & 環境",
-        "items": ["Git", "VS Code", "Vercel", "Webpack", "Vite", "npm/yarn"]
+        "category": "UI ライブラリ & スタイル",
+        "items": ["shadcn/ui", "Ant Design", "Mantine UI", "Bootstrap"]
       },
       "backend": {
-        "category": "Backend & DB",
-        "items": ["Node.js", "Express", "MongoDB", "PostgreSQL", "Firebase", "Supabase"]
+        "category": "Backend 開発",
+        "items": ["Node.js", "NestJS", "ExpressJS", "RESTful API 開発"]
       },
-      "optimization": {
-        "category": "最適化",
-        "items": ["SEO", "Web Vitals", "アクセシビリティ (a11y)", "パフォーマンス改善"]
+      "databases": {
+        "category": "データベース & キャッシュ",
+        "items": ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
+      },
+      "state": {
+        "category": "状態管理",
+        "items": ["Zustand", "Redux"]
+      },
+      "ai": {
+        "category": "AI & 開発ツール",
+        "items": ["Cursor", "GitHub Copilot", "Antigravity", "Prompt Engineering", "AI 支援開発"]
+      },
+      "tools": {
+        "category": "その他のツール & 技術",
+        "items": ["Git", "GitHub", "Postman", "Docker", "Figma", "Arduino / IoT"]
       }
     }
   },
@@ -58,18 +106,62 @@
     "preview": "プロジェクトプレビュー",
     "liveDemo": "デモ",
     "githubRepository": "GitHub リポジトリ",
+    "viewMore": "プロジェクトをもっと見る",
+    "allProjects": "すべてのプロジェクト",
+    "allProjectsDescription": "各プロジェクトの役割、使用技術、リンクをご覧ください。",
+    "viewProject": "プロジェクトの詳細を見る",
+    "backToProjects": "プロジェクト一覧に戻る",
+    "technologies": "使用技術",
     "projects": {
-      "portfolio": {
-        "title": "Portfolio V2",
-        "description": "スクロールベースのモダンなナビゲーション、BGM、滑らかなアニメーションを備えた個人ポートフォリオです。"
+      "homeiq": {
+        "title": "HomeIQ",
+        "role": "チームリーダー & フルスタック開発者",
+        "duration": "2026年1月 – 2026年4月",
+        "description": "モバイルアプリからIoT機器を操作できる、スマートサービスアパートメント管理プラットフォームです。",
+        "technologies": ["Next.js", "NestJS", "PostgreSQL", "Redis", "React Native", "Arduino"],
+        "gradient": "from-violet-500/20 to-blue-500/20",
+        "link": "https://homeiq-gamma.vercel.app",
+        "github": ""
       },
-      "commerce": {
-        "title": "E-Commerce Platform",
-        "description": "カート管理、ユーザー認証、決済連携を備えたフルスタックのECソリューションです。"
+      "lensor": {
+        "title": "Lensor",
+        "role": "フルスタック開発者",
+        "duration": "2025年8月 – 2025年11月",
+        "description": "写真家が作品を共有し、デジタル写真プリセットを売買できる写真特化型ソーシャル・マーケットプレイスです。",
+        "technologies": ["Next.js", "NestJS", "MongoDB", "Redis", "Zustand"],
+        "gradient": "from-emerald-500/20 to-teal-500/20",
+        "link": "https://lensor-frontend.vercel.app",
+        "github": ""
       },
-      "analytics": {
-        "title": "Analytics Dashboard",
-        "description": "システム性能やユーザー指標を監視するためのリアルタイムデータ可視化ダッシュボードです。"
+      "phu-cuong-logistics": {
+        "title": "Phu Cuong Logistics",
+        "role": "フルスタック開発者",
+        "duration": "2026年6月 – 2026年7月",
+        "description": "農産物、輸出サービス、国際物流の実績を紹介するレスポンシブなB2Bサイトです。",
+        "technologies": ["Next.js", "Tailwind CSS", "NestJS", "MySQL"],
+        "gradient": "from-orange-500/20 to-red-500/20",
+        "link": "https://phucuonglogistic.com",
+        "github": ""
+      },
+      "fpt-mentor": {
+        "title": "FPT Mentor",
+        "role": "チームリーダー & フロントエンド開発者",
+        "duration": "2024年1月 – 2024年3月",
+        "description": "FPT大学向けに開発した、学生メンタリングと予約管理のプラットフォームです。",
+        "technologies": ["Next.js", "ExpressJS", "MySQL", "Zustand"],
+        "gradient": "from-cyan-500/20 to-sky-500/20",
+        "link": "",
+        "github": "https://github.com/baotrongnh/swp-mentor-booking-client"
+      },
+      "ours": {
+        "title": "Ours",
+        "role": "フルスタック開発者",
+        "duration": "2026年9月 – 2026年10月",
+        "description": "カップルが共有の思い出を管理し、予定を立て、プライベートなデジタルレターを交換できるWebアプリです。",
+        "technologies": ["Next.js", "Tailwind CSS"],
+        "gradient": "from-pink-500/20 to-purple-500/20",
+        "link": "https://us-mocha-iota.vercel.app",
+        "github": ""
       }
     }
   },
@@ -92,6 +184,7 @@
   "Dock": {
     "home": "ホーム",
     "about": "自己紹介",
+    "experience": "経験",
     "skills": "スキル",
     "projects": "プロジェクト",
     "contact": "連絡先",

@@ -18,36 +18,84 @@
     "titleSuffix": "一名前端开发者",
     "bio": "我是一名前端开发者，喜欢研究字体、颜色，并打造让人感觉友好的网站。我喜欢创建简单、干净、易用的界面，让用户拥有顺畅的体验。对我来说，重点是在不过度复杂化的前提下，让产品变得更好看。",
     "downloadCv": "下载 CV",
-    "imageAlt": "宝忠 - 前端开发者"
+    "imageAlt": "宝忠 - 前端开发者",
+    "location": "越南胡志明市"
+  },
+  "ExperienceSection": {
+    "eyebrow": "工作经历",
+    "title": "职业",
+    "titleHighlight": "历程",
+    "description": "拥有涵盖前端界面、API、数据库和 IoT 的全栈 Web 开发经验。",
+    "experienceTitle": "工作经历",
+    "viewDetails": "查看详情",
+    "responsibilities": "工作职责",
+    "technologies": "使用技术",
+    "experience": [
+      {
+        "company": "FPT Software",
+        "role": "前端开发实习生",
+        "period": "2025年1月 – 2025年4月",
+        "description": "使用 VueJS 和 NuxtJS 开发响应式界面、集成 REST API，并改善多设备兼容性。",
+        "responsibilities": [
+          "使用 VueJS 和 NuxtJS 开发并维护响应式 Web 界面。",
+          "集成 RESTful API，并与后端开发人员协作，确保数据流畅传递。",
+          "发现并解决界面问题。",
+          "改善不同设备和浏览器之间的兼容性。",
+          "使用现代开发工具维护代码质量并提升开发效率。"
+        ],
+        "stack": "VueJS, NuxtJS, JavaScript, RESTful APIs"
+      },
+      {
+        "company": "MindX",
+        "role": "编程讲师",
+        "period": "2026年5月 – 至今",
+        "description": "通过实践课程教授编程与机器人，并指导学生编码和解决问题。",
+        "responsibilities": [
+          "使用 Python、JavaScript、HTML、CSS 和机器人技术教授编程概念与实践技能。",
+          "通过动手项目帮助学生培养逻辑思维和问题解决能力。",
+          "在编程练习和实践活动中为学生提供指导。",
+          "与其他讲师合作准备课程并跟进学生的学习进度。"
+        ],
+        "stack": "Python, JavaScript, HTML, CSS, Robotics"
+      }
+    ]
   },
   "SkillSection": {
     "title": "技能 &",
     "titleHighlight": "专长",
     "description": "我用于构建可扩展、可访问且高性能 Web 应用的技术工具箱。",
     "skills": {
+      "languages": {
+        "category": "编程语言",
+        "items": ["JavaScript", "TypeScript", "Java", "C/C++"]
+      },
       "frontend": {
-        "category": "Frontend Core",
-        "items": ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"]
+        "category": "前端开发",
+        "items": ["ReactJS", "Next.js", "React Native", "VueJS", "NuxtJS", "HTML5", "CSS3", "Tailwind CSS"]
       },
       "styling": {
-        "category": "Styling & UI",
-        "items": ["Tailwind CSS", "Framer Motion", "SCSS", "Styled Components", "Shadcn UI"]
-      },
-      "architecture": {
-        "category": "架构",
-        "items": ["响应式设计", "Micro-frontends", "状态管理", "组件设计"]
-      },
-      "tools": {
-        "category": "工具 & 环境",
-        "items": ["Git", "VS Code", "Vercel", "Webpack", "Vite", "npm/yarn"]
+        "category": "UI 库与样式",
+        "items": ["shadcn/ui", "Ant Design", "Mantine UI", "Bootstrap"]
       },
       "backend": {
-        "category": "Backend & DB",
-        "items": ["Node.js", "Express", "MongoDB", "PostgreSQL", "Firebase", "Supabase"]
+        "category": "后端开发",
+        "items": ["Node.js", "NestJS", "ExpressJS", "RESTful API 开发"]
       },
-      "optimization": {
-        "category": "优化",
-        "items": ["SEO", "Web Vitals", "可访问性 (a11y)", "性能优化"]
+      "databases": {
+        "category": "数据库与缓存",
+        "items": ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
+      },
+      "state": {
+        "category": "状态管理",
+        "items": ["Zustand", "Redux"]
+      },
+      "ai": {
+        "category": "AI 与开发工具",
+        "items": ["Cursor", "GitHub Copilot", "Antigravity", "Prompt Engineering", "AI 辅助开发"]
+      },
+      "tools": {
+        "category": "其他工具与技术",
+        "items": ["Git", "GitHub", "Postman", "Docker", "Figma", "Arduino / IoT"]
       }
     }
   },
@@ -58,18 +106,62 @@
     "preview": "项目预览",
     "liveDemo": "在线演示",
     "githubRepository": "GitHub 仓库",
+    "viewMore": "查看更多项目",
+    "allProjects": "全部项目",
+    "allProjectsDescription": "查看每个项目、承担的角色、使用的技术和项目链接。",
+    "viewProject": "查看项目详情",
+    "backToProjects": "返回全部项目",
+    "technologies": "使用技术",
     "projects": {
-      "portfolio": {
-        "title": "Portfolio V2",
-        "description": "我的个人作品集网站，包含现代化的滚动导航、背景音乐和流畅动画。"
+      "homeiq": {
+        "title": "HomeIQ",
+        "role": "团队负责人 & 全栈开发者",
+        "duration": "2026年1月 – 2026年4月",
+        "description": "智能服务式公寓管理平台，可通过移动应用集成控制物联网设备。",
+        "technologies": ["Next.js", "NestJS", "PostgreSQL", "Redis", "React Native", "Arduino"],
+        "gradient": "from-violet-500/20 to-blue-500/20",
+        "link": "https://homeiq-gamma.vercel.app",
+        "github": ""
       },
-      "commerce": {
-        "title": "E-Commerce Platform",
-        "description": "一个全栈电商解决方案，包含购物车管理、用户认证和支付集成。"
+      "lensor": {
+        "title": "Lensor",
+        "role": "全栈开发者",
+        "duration": "2025年8月 – 2025年11月",
+        "description": "面向摄影的社交平台与数字市场，摄影师可分享内容并买卖数字照片预设。",
+        "technologies": ["Next.js", "NestJS", "MongoDB", "Redis", "Zustand"],
+        "gradient": "from-emerald-500/20 to-teal-500/20",
+        "link": "https://lensor-frontend.vercel.app",
+        "github": ""
       },
-      "analytics": {
-        "title": "Analytics Dashboard",
-        "description": "用于监控系统性能和用户指标的实时数据可视化仪表盘。"
+      "phu-cuong-logistics": {
+        "title": "Phu Cuong Logistics",
+        "role": "全栈开发者",
+        "duration": "2026年6月 – 2026年7月",
+        "description": "展示农产品、出口服务和国际物流能力的响应式 B2B 网站。",
+        "technologies": ["Next.js", "Tailwind CSS", "NestJS", "MySQL"],
+        "gradient": "from-orange-500/20 to-red-500/20",
+        "link": "https://phucuonglogistic.com",
+        "github": ""
+      },
+      "fpt-mentor": {
+        "title": "FPT Mentor",
+        "role": "团队负责人 & 前端开发者",
+        "duration": "2024年1月 – 2024年3月",
+        "description": "为 FPT 大学开发的学生导师与预约排期平台。",
+        "technologies": ["Next.js", "ExpressJS", "MySQL", "Zustand"],
+        "gradient": "from-cyan-500/20 to-sky-500/20",
+        "link": "",
+        "github": "https://github.com/baotrongnh/swp-mentor-booking-client"
+      },
+      "ours": {
+        "title": "Ours",
+        "role": "全栈开发者",
+        "duration": "2026年9月 – 2026年10月",
+        "description": "为情侣打造的个性化 Web 应用，可管理共同回忆、规划活动并交换私密数字信件。",
+        "technologies": ["Next.js", "Tailwind CSS"],
+        "gradient": "from-pink-500/20 to-purple-500/20",
+        "link": "https://us-mocha-iota.vercel.app",
+        "github": ""
       }
     }
   },
@@ -92,6 +184,7 @@
   "Dock": {
     "home": "首页",
     "about": "关于",
+    "experience": "经历",
     "skills": "技能",
     "projects": "项目",
     "contact": "联系",

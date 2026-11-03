@@ -4,82 +4,174 @@
     "myName": "Bao Trong",
     "hi": "Hi",
     "i'm": "I'm",
-    "role": "Front-end developer",
-    "description": "Welcome to my portfolio page, where you'll find everything about me - from my hobbies, photography, personal life, to the resources I often use, and of course, code.",
-    "hireMe": "Hire me",
+    "role": "Full-stack Developer",
+    "description": "Software Engineering graduate from FPT University with hands-on experience in full-stack web development using ReactJS, Next.js, Node.js, and NestJS.",
+    "hireMe": "Explore more",
     "github": "GitHub",
     "scroll": "Scroll",
     "languages": "Languages"
   },
   "AboutSection": {
-    "eyebrow": "Who am I?",
+    "eyebrow": "About me",
     "titlePrefix": "I'm",
-    "titleName": "Bao Trong",
-    "titleSuffix": "a Front-end Developer",
-    "bio": "I'm a frontend developer who loves working with fonts, colors, and making sure websites feel welcoming. I enjoy creating simple, clean designs that are easy to use and help people have a smooth experience. It's all about making things look nice without overcomplicating them!",
+    "titleName": "Nguyen Huynh Bao Trong",
+    "titleSuffix": "a Full-stack Developer",
+    "bio": "FPT University Software Engineering graduate with full-stack experience in ReactJS, Next.js, Node.js, and NestJS. I build responsive interfaces and reliable backend services, with hands-on work in APIs, databases, and IoT.",
     "downloadCv": "Download CV",
-    "imageAlt": "Bao Trong - Front-end Developer"
+    "imageAlt": "Nguyen Huynh Bao Trong - Full-stack Developer",
+    "location": "Ho Chi Minh City, Vietnam"
+  },
+  "ExperienceSection": {
+    "eyebrow": "Work Experience",
+    "title": "Career journey",
+    "titleHighlight": "so far",
+    "description": "Full-stack web development experience across frontend interfaces, APIs, databases, and IoT.",
+    "experienceTitle": "Work experience",
+    "viewDetails": "View details",
+    "responsibilities": "Responsibilities",
+    "technologies": "Technologies",
+    "experience": [
+      {
+        "company": "FPT Software",
+        "role": "Front-end Developer Intern",
+        "period": "January 2025 – April 2025",
+        "description": "Built responsive VueJS and NuxtJS interfaces, integrated REST APIs, and improved cross-device compatibility.",
+        "responsibilities": [
+          "Developed and maintained responsive web interfaces using VueJS and NuxtJS.",
+          "Integrated RESTful APIs and collaborated with backend developers to ensure seamless data flow.",
+          "Identified and resolved user interface issues.",
+          "Improved cross-device and cross-browser compatibility.",
+          "Used modern development tools to maintain code quality and development efficiency."
+        ],
+        "stack": "VueJS, NuxtJS, JavaScript, RESTful APIs"
+      },
+      {
+        "company": "MindX",
+        "role": "Coding Instructor",
+        "period": "May 2026 – Present",
+        "description": "Teach programming and robotics through hands-on lessons, guiding students in coding and problem-solving.",
+        "responsibilities": [
+          "Teach programming concepts and practical coding skills using Python, JavaScript, HTML, CSS, and robotics.",
+          "Guide students in developing problem-solving skills and logical thinking through hands-on projects.",
+          "Support students during programming exercises and practical activities.",
+          "Collaborate with other instructors to prepare lessons and monitor student learning progress."
+        ],
+        "stack": "Python, JavaScript, HTML, CSS, Robotics"
+      }
+    ]
   },
   "SkillSection": {
     "title": "Skills &",
     "titleHighlight": "Expertise",
-    "description": "My technical toolkit for building scalable, accessible, and performant web applications.",
+    "description": "Key technologies and workflows I use to design, build, and ship full-stack digital products.",
     "skills": {
+      "languages": {
+        "category": "Programming Languages",
+        "items": ["JavaScript", "TypeScript", "Java", "C/C++"]
+      },
       "frontend": {
-        "category": "Frontend Core",
-        "items": ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"]
+        "category": "Frontend Development",
+        "items": ["ReactJS", "Next.js", "React Native", "VueJS", "NuxtJS", "HTML5", "CSS3", "Tailwind CSS"]
       },
       "styling": {
-        "category": "Styling & UI",
-        "items": ["Tailwind CSS", "Framer Motion", "SCSS", "Styled Components", "Shadcn UI"]
-      },
-      "architecture": {
-        "category": "Architecture",
-        "items": ["Responsive Design", "Micro-frontends", "State Management", "Component Design"]
-      },
-      "tools": {
-        "category": "Tools & Env",
-        "items": ["Git", "VS Code", "Vercel", "Webpack", "Vite", "npm/yarn"]
+        "category": "UI Libraries & Styling",
+        "items": ["shadcn/ui", "Ant Design", "Mantine UI", "Bootstrap"]
       },
       "backend": {
-        "category": "Backend & DB",
-        "items": ["Node.js", "Express", "MongoDB", "PostgreSQL", "Firebase", "Supabase"]
+        "category": "Backend Development",
+        "items": ["Node.js", "NestJS", "ExpressJS", "RESTful API Development"]
       },
-      "optimization": {
-        "category": "Optimization",
-        "items": ["SEO", "Web Vitals", "Accessibility (a11y)", "Performance Tuning"]
+      "databases": {
+        "category": "Databases & Caching",
+        "items": ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
+      },
+      "state": {
+        "category": "State Management",
+        "items": ["Zustand", "Redux"]
+      },
+      "ai": {
+        "category": "AI & Development Tools",
+        "items": ["Cursor", "GitHub Copilot", "Antigravity", "Prompt Engineering", "AI-assisted Development"]
+      },
+      "tools": {
+        "category": "Other Tools & Technologies",
+        "items": ["Git", "GitHub", "Postman", "Docker", "Figma", "Arduino / IoT"]
       }
     }
   },
   "ProjectSection": {
     "title": "Featured",
     "titleHighlight": "Projects",
-    "description": "A selection of my recent work, highlighting creative solutions and technical capabilities.",
+    "description": "A selection of projects that reflect my full-stack development experience, practical problem solving, and product impact.",
     "preview": "Project Preview",
     "liveDemo": "Live Demo",
     "githubRepository": "GitHub Repository",
+    "viewMore": "View more projects",
+    "allProjects": "All projects",
+    "allProjectsDescription": "Explore each project, its role, technologies, and project link.",
+    "viewProject": "View project details",
+    "backToProjects": "Back to all projects",
+    "technologies": "Technologies",
     "projects": {
-      "portfolio": {
-        "title": "Portfolio V2",
-        "description": "My personal portfolio website featuring modern scroll-based navigation, background music, and smooth animations."
+      "homeiq": {
+        "title": "HomeIQ",
+        "role": "Team Leader & Full-stack Developer",
+        "duration": "January 2026 – April 2026",
+        "description": "A smart serviced apartment management platform that integrates IoT device control through a mobile application.",
+        "technologies": ["Next.js", "NestJS", "PostgreSQL", "Redis", "React Native", "Arduino"],
+        "gradient": "from-violet-500/20 to-blue-500/20",
+        "link": "https://homeiq-gamma.vercel.app",
+        "github": ""
       },
-      "commerce": {
-        "title": "E-Commerce Platform",
-        "description": "A full-stack e-commerce solution with cart management, user authentication, and payment processing integration."
+      "lensor": {
+        "title": "Lensor",
+        "role": "Full-stack Developer",
+        "duration": "August 2025 – November 2025",
+        "description": "A photography-focused social platform and digital marketplace where photographers can share content and buy or sell digital photo presets.",
+        "technologies": ["Next.js", "NestJS", "MongoDB", "Redis", "Zustand"],
+        "gradient": "from-emerald-500/20 to-teal-500/20",
+        "link": "https://lensor-frontend.vercel.app",
+        "github": ""
       },
-      "analytics": {
-        "title": "Analytics Dashboard",
-        "description": "A real-time data visualization dashboard for monitoring system performance and user metrics."
+      "phu-cuong-logistics": {
+        "title": "Phu Cuong Logistics",
+        "role": "Full-stack Developer",
+        "duration": "June 2026 – July 2026",
+        "description": "A responsive B2B website showcasing agricultural products, export services, and international logistics capabilities.",
+        "technologies": ["Next.js", "Tailwind CSS", "NestJS", "MySQL"],
+        "gradient": "from-orange-500/20 to-red-500/20",
+        "link": "https://phucuonglogistic.com",
+        "github": ""
+      },
+      "fpt-mentor": {
+        "title": "FPT Mentor",
+        "role": "Team Leader & Front-end Developer",
+        "duration": "January 2024 – March 2024",
+        "description": "A student mentoring and appointment scheduling platform developed for FPT University.",
+        "technologies": ["Next.js", "ExpressJS", "MySQL", "Zustand"],
+        "gradient": "from-cyan-500/20 to-sky-500/20",
+        "link": "",
+        "github": "https://github.com/baotrongnh/swp-mentor-booking-client"
+      },
+      "ours": {
+        "title": "Ours",
+        "role": "Full-stack Developer",
+        "duration": "September 2026 – October 2026",
+        "description": "A personalized web application for couples to manage shared memories, plan activities, and exchange private digital letters.",
+        "technologies": ["Next.js", "Tailwind CSS"],
+        "gradient": "from-pink-500/20 to-purple-500/20",
+        "link": "https://us-mocha-iota.vercel.app",
+        "github": ""
       }
     }
   },
   "ContactSection": {
     "titlePrefix": "Let's",
     "titleHighlight": "Connect",
-    "description": "Open for opportunities, collaborations, or just a friendly chat about web development.",
+    "description": "Open for opportunities, collaborations, or a friendly conversation about building meaningful digital products.",
     "email": "Email",
     "location": "Location",
-    "locationValue": "Vietnam",
+    "locationValue": "Ho Chi Minh City, Vietnam",
     "phone": "Phone",
     "sendMessage": "Send a message",
     "name": "Name",
@@ -92,6 +184,7 @@
   "Dock": {
     "home": "Home",
     "about": "About",
+    "experience": "Experience",
     "skills": "Skills",
     "projects": "Projects",
     "contact": "Contact",

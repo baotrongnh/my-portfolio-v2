@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils"
 import {
   CodeXml,
+  BriefcaseBusiness,
   FolderGit2,
   Home,
   Mail,
@@ -24,6 +25,7 @@ import { useActiveSection, type SectionId } from "./active-section-context"
 const DOCK_ITEMS: { titleKey: string; icon: React.ReactNode; target: SectionId }[] = [
   { titleKey: "home", icon: <Home />, target: "hero" },
   { titleKey: "about", icon: <User />, target: "about" },
+  { titleKey: "experience", icon: <BriefcaseBusiness />, target: "experience" },
   { titleKey: "skills", icon: <Wrench />, target: "skill" },
   { titleKey: "projects", icon: <FolderGit2 />, target: "project" },
   { titleKey: "contact", icon: <Mail />, target: "contact" },

@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useCallback } from "react"
 
-export type SectionId = "hero" | "about" | "skill" | "project" | "contact"
+export type SectionId = "hero" | "about" | "experience" | "skill" | "project" | "contact"
 
 interface ActiveSectionContextType {
   activeSection: SectionId

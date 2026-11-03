@@ -18,36 +18,84 @@
     "titleSuffix": "프론트엔드 개발자입니다",
     "bio": "저는 폰트와 색상, 그리고 편안하게 느껴지는 웹사이트를 만드는 것을 좋아하는 프론트엔드 개발자입니다. 단순하고 깔끔하며 사용하기 쉬운 인터페이스를 만들고, 부드러운 경험을 제공하는 것을 즐깁니다. 복잡하게 만들지 않으면서 보기 좋게 다듬는 것이 제 목표입니다.",
     "downloadCv": "CV 다운로드",
-    "imageAlt": "바오 쫑 - 프론트엔드 개발자"
+    "imageAlt": "바오 쫑 - 프론트엔드 개발자",
+    "location": "베트남 호치민시"
+  },
+  "ExperienceSection": {
+    "eyebrow": "업무 경험",
+    "title": "지금까지의",
+    "titleHighlight": "커리어",
+    "description": "프론트엔드, API, 데이터베이스, IoT를 아우르는 풀스택 웹 개발 경험입니다.",
+    "experienceTitle": "업무 경험",
+    "viewDetails": "자세히 보기",
+    "responsibilities": "담당 업무",
+    "technologies": "사용 기술",
+    "experience": [
+      {
+        "company": "FPT Software",
+        "role": "프론트엔드 개발 인턴",
+        "period": "2025년 1월 – 2025년 4월",
+        "description": "VueJS와 NuxtJS로 반응형 UI를 개발하고 REST API를 연동했으며 다양한 기기 호환성을 개선했습니다.",
+        "responsibilities": [
+          "VueJS와 NuxtJS를 사용해 반응형 웹 인터페이스를 개발하고 유지보수했습니다.",
+          "RESTful API를 연동하고 백엔드 개발자와 협업해 원활한 데이터 흐름을 구현했습니다.",
+          "UI 문제를 찾아 해결했습니다.",
+          "다양한 기기와 브라우저 간 호환성을 개선했습니다.",
+          "최신 개발 도구를 활용해 코드 품질과 개발 효율을 유지했습니다."
+        ],
+        "stack": "VueJS, NuxtJS, JavaScript, RESTful APIs"
+      },
+      {
+        "company": "MindX",
+        "role": "코딩 강사",
+        "period": "2026년 5월 – 현재",
+        "description": "실습 중심 수업으로 프로그래밍과 로보틱스를 가르치고 코딩 및 문제 해결을 지도합니다.",
+        "responsibilities": [
+          "Python, JavaScript, HTML, CSS, 로보틱스를 활용해 프로그래밍 개념과 실습을 가르칩니다.",
+          "실습 프로젝트를 통해 학생들의 문제 해결력과 논리적 사고력 향상을 돕습니다.",
+          "프로그래밍 연습과 실습 활동 중 학생들을 지원합니다.",
+          "다른 강사들과 수업을 준비하고 학습 진행 상황을 확인합니다."
+        ],
+        "stack": "Python, JavaScript, HTML, CSS, Robotics"
+      }
+    ]
   },
   "SkillSection": {
     "title": "기술 &",
     "titleHighlight": "전문성",
     "description": "확장 가능하고 접근성이 좋으며 성능이 뛰어난 웹 애플리케이션을 만들기 위한 기술 도구입니다.",
     "skills": {
+      "languages": {
+        "category": "프로그래밍 언어",
+        "items": ["JavaScript", "TypeScript", "Java", "C/C++"]
+      },
       "frontend": {
-        "category": "Frontend Core",
-        "items": ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"]
+        "category": "프론트엔드 개발",
+        "items": ["ReactJS", "Next.js", "React Native", "VueJS", "NuxtJS", "HTML5", "CSS3", "Tailwind CSS"]
       },
       "styling": {
-        "category": "Styling & UI",
-        "items": ["Tailwind CSS", "Framer Motion", "SCSS", "Styled Components", "Shadcn UI"]
-      },
-      "architecture": {
-        "category": "아키텍처",
-        "items": ["반응형 디자인", "Micro-frontends", "상태 관리", "컴포넌트 설계"]
-      },
-      "tools": {
-        "category": "도구 & 환경",
-        "items": ["Git", "VS Code", "Vercel", "Webpack", "Vite", "npm/yarn"]
+        "category": "UI 라이브러리 & 스타일링",
+        "items": ["shadcn/ui", "Ant Design", "Mantine UI", "Bootstrap"]
       },
       "backend": {
-        "category": "Backend & DB",
-        "items": ["Node.js", "Express", "MongoDB", "PostgreSQL", "Firebase", "Supabase"]
+        "category": "백엔드 개발",
+        "items": ["Node.js", "NestJS", "ExpressJS", "RESTful API 개발"]
       },
-      "optimization": {
-        "category": "최적화",
-        "items": ["SEO", "Web Vitals", "접근성 (a11y)", "성능 튜닝"]
+      "databases": {
+        "category": "데이터베이스 & 캐싱",
+        "items": ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
+      },
+      "state": {
+        "category": "상태 관리",
+        "items": ["Zustand", "Redux"]
+      },
+      "ai": {
+        "category": "AI & 개발 도구",
+        "items": ["Cursor", "GitHub Copilot", "Antigravity", "Prompt Engineering", "AI 보조 개발"]
+      },
+      "tools": {
+        "category": "기타 도구 & 기술",
+        "items": ["Git", "GitHub", "Postman", "Docker", "Figma", "Arduino / IoT"]
       }
     }
   },
@@ -58,18 +106,62 @@
     "preview": "프로젝트 미리보기",
     "liveDemo": "데모",
     "githubRepository": "GitHub 저장소",
+    "viewMore": "프로젝트 더 보기",
+    "allProjects": "전체 프로젝트",
+    "allProjectsDescription": "각 프로젝트의 역할, 사용 기술, 링크를 확인해 보세요.",
+    "viewProject": "프로젝트 자세히 보기",
+    "backToProjects": "전체 프로젝트로 돌아가기",
+    "technologies": "사용 기술",
     "projects": {
-      "portfolio": {
-        "title": "Portfolio V2",
-        "description": "현대적인 스크롤 기반 내비게이션, 배경 음악, 부드러운 애니메이션을 담은 개인 포트폴리오 웹사이트입니다."
+      "homeiq": {
+        "title": "HomeIQ",
+        "role": "팀 리더 & 풀스택 개발자",
+        "duration": "2026년 1월 – 2026년 4월",
+        "description": "모바일 앱을 통한 IoT 기기 제어를 통합한 스마트 서비스 아파트 관리 플랫폼입니다.",
+        "technologies": ["Next.js", "NestJS", "PostgreSQL", "Redis", "React Native", "Arduino"],
+        "gradient": "from-violet-500/20 to-blue-500/20",
+        "link": "https://homeiq-gamma.vercel.app",
+        "github": ""
       },
-      "commerce": {
-        "title": "E-Commerce Platform",
-        "description": "장바구니 관리, 사용자 인증, 결제 연동을 포함한 풀스택 이커머스 솔루션입니다."
+      "lensor": {
+        "title": "Lensor",
+        "role": "풀스택 개발자",
+        "duration": "2025년 8월 – 2025년 11월",
+        "description": "사진작가가 콘텐츠를 공유하고 디지털 사진 프리셋을 사고팔 수 있는 사진 중심 소셜 플랫폼 및 마켓플레이스입니다.",
+        "technologies": ["Next.js", "NestJS", "MongoDB", "Redis", "Zustand"],
+        "gradient": "from-emerald-500/20 to-teal-500/20",
+        "link": "https://lensor-frontend.vercel.app",
+        "github": ""
       },
-      "analytics": {
-        "title": "Analytics Dashboard",
-        "description": "시스템 성능과 사용자 지표를 모니터링하기 위한 실시간 데이터 시각화 대시보드입니다."
+      "phu-cuong-logistics": {
+        "title": "Phu Cuong Logistics",
+        "role": "풀스택 개발자",
+        "duration": "2026년 6월 – 2026년 7월",
+        "description": "농산물, 수출 서비스, 국제 물류 역량을 소개하는 반응형 B2B 웹사이트입니다.",
+        "technologies": ["Next.js", "Tailwind CSS", "NestJS", "MySQL"],
+        "gradient": "from-orange-500/20 to-red-500/20",
+        "link": "https://phucuonglogistic.com",
+        "github": ""
+      },
+      "fpt-mentor": {
+        "title": "FPT Mentor",
+        "role": "팀 리더 & 프론트엔드 개발자",
+        "duration": "2024년 1월 – 2024년 3월",
+        "description": "FPT 대학교를 위해 개발한 학생 멘토링 및 예약 일정 관리 플랫폼입니다.",
+        "technologies": ["Next.js", "ExpressJS", "MySQL", "Zustand"],
+        "gradient": "from-cyan-500/20 to-sky-500/20",
+        "link": "",
+        "github": "https://github.com/baotrongnh/swp-mentor-booking-client"
+      },
+      "ours": {
+        "title": "Ours",
+        "role": "풀스택 개발자",
+        "duration": "2026년 9월 – 2026년 10월",
+        "description": "커플이 추억을 공유하고 활동을 계획하며 비공개 디지털 편지를 주고받을 수 있는 맞춤형 웹 애플리케이션입니다.",
+        "technologies": ["Next.js", "Tailwind CSS"],
+        "gradient": "from-pink-500/20 to-purple-500/20",
+        "link": "https://us-mocha-iota.vercel.app",
+        "github": ""
       }
     }
   },
@@ -92,6 +184,7 @@
   "Dock": {
     "home": "홈",
     "about": "소개",
+    "experience": "경력",
     "skills": "기술",
     "projects": "프로젝트",
     "contact": "연락처",

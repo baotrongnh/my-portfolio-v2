@@ -160,13 +160,39 @@
   height: 100%;
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding-block: clamp(4rem, 8vh, 6rem) 8rem;
+  padding-block: clamp(2rem, 4vh, 3rem) 5rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
 .section-scroll::-webkit-scrollbar {
   display: none;
+}
+
+.modal-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(139 92 246 / 55%) rgb(255 255 255 / 5%);
+  overscroll-behavior: contain;
+}
+
+.modal-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-scrollbar::-webkit-scrollbar-track {
+  margin-block: 12px;
+  border-radius: 9999px;
+  background: rgb(255 255 255 / 4%);
+}
+
+.modal-scrollbar::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, rgb(192 132 252 / 85%), rgb(124 58 237 / 75%)) padding-box;
+}
+
+.modal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgb(216 180 254 / 95%), rgb(139 92 246 / 90%)) padding-box;
 }
 
 

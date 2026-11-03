@@ -18,36 +18,84 @@
     "titleSuffix": "développeur Front-end",
     "bio": "Je suis un développeur frontend qui aime travailler avec les polices, les couleurs et créer des sites accueillants. J'aime concevoir des interfaces simples, propres et faciles à utiliser, pour offrir une expérience fluide. Pour moi, l'objectif est de rendre les choses belles sans les compliquer.",
     "downloadCv": "Télécharger le CV",
-    "imageAlt": "Bao Trong - Développeur Front-end"
+    "imageAlt": "Bao Trong - Développeur Front-end",
+    "location": "Hô Chi Minh-Ville, Vietnam"
+  },
+  "ExperienceSection": {
+    "eyebrow": "Expérience professionnelle",
+    "title": "Parcours",
+    "titleHighlight": "professionnel",
+    "description": "Expérience en développement web full-stack : interfaces, API, bases de données et IoT.",
+    "experienceTitle": "Expérience professionnelle",
+    "viewDetails": "Voir les détails",
+    "responsibilities": "Responsabilités",
+    "technologies": "Technologies",
+    "experience": [
+      {
+        "company": "FPT Software",
+        "role": "Stagiaire développeur Front-end",
+        "period": "Janvier 2025 – Avril 2025",
+        "description": "Création d'interfaces responsive avec VueJS et NuxtJS, intégration d'API REST et amélioration de la compatibilité multi-appareils.",
+        "responsibilities": [
+          "Développement et maintenance d'interfaces web responsive avec VueJS et NuxtJS.",
+          "Intégration d'API RESTful et collaboration avec les développeurs backend pour assurer un flux de données fluide.",
+          "Identification et résolution des problèmes d'interface.",
+          "Amélioration de la compatibilité entre appareils et navigateurs.",
+          "Utilisation d'outils de développement modernes pour maintenir la qualité du code et l'efficacité."
+        ],
+        "stack": "VueJS, NuxtJS, JavaScript, RESTful APIs"
+      },
+      {
+        "company": "MindX",
+        "role": "Formateur en programmation",
+        "period": "Mai 2026 – Aujourd'hui",
+        "description": "Enseignement de la programmation et de la robotique par des exercices pratiques, avec un accompagnement au code et à la résolution de problèmes.",
+        "responsibilities": [
+          "Enseignement de la programmation et des bases du code avec Python, JavaScript, HTML, CSS et la robotique.",
+          "Accompagnement des élèves dans le développement de leur logique et de leurs compétences en résolution de problèmes par des projets pratiques.",
+          "Soutien aux élèves pendant les exercices de programmation et les activités pratiques.",
+          "Collaboration avec les autres formateurs pour préparer les cours et suivre les progrès des élèves."
+        ],
+        "stack": "Python, JavaScript, HTML, CSS, Robotics"
+      }
+    ]
   },
   "SkillSection": {
     "title": "Compétences &",
     "titleHighlight": "Expertise",
     "description": "Ma boîte à outils technique pour créer des applications web évolutives, accessibles et performantes.",
     "skills": {
+      "languages": {
+        "category": "Langages de programmation",
+        "items": ["JavaScript", "TypeScript", "Java", "C/C++"]
+      },
       "frontend": {
-        "category": "Base Frontend",
-        "items": ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"]
+        "category": "Développement Frontend",
+        "items": ["ReactJS", "Next.js", "React Native", "VueJS", "NuxtJS", "HTML5", "CSS3", "Tailwind CSS"]
       },
       "styling": {
-        "category": "Style & UI",
-        "items": ["Tailwind CSS", "Framer Motion", "SCSS", "Styled Components", "Shadcn UI"]
-      },
-      "architecture": {
-        "category": "Architecture",
-        "items": ["Design responsive", "Micro-frontends", "Gestion d'état", "Conception de composants"]
-      },
-      "tools": {
-        "category": "Outils & Environnement",
-        "items": ["Git", "VS Code", "Vercel", "Webpack", "Vite", "npm/yarn"]
+        "category": "Bibliothèques UI & style",
+        "items": ["shadcn/ui", "Ant Design", "Mantine UI", "Bootstrap"]
       },
       "backend": {
-        "category": "Backend & Base de données",
-        "items": ["Node.js", "Express", "MongoDB", "PostgreSQL", "Firebase", "Supabase"]
+        "category": "Développement Backend",
+        "items": ["Node.js", "NestJS", "ExpressJS", "Développement d'API RESTful"]
       },
-      "optimization": {
-        "category": "Optimisation",
-        "items": ["SEO", "Web Vitals", "Accessibilité (a11y)", "Optimisation des performances"]
+      "databases": {
+        "category": "Bases de données & cache",
+        "items": ["PostgreSQL", "MySQL", "MongoDB", "Redis"]
+      },
+      "state": {
+        "category": "Gestion d'état",
+        "items": ["Zustand", "Redux"]
+      },
+      "ai": {
+        "category": "IA & outils de développement",
+        "items": ["Cursor", "GitHub Copilot", "Antigravity", "Prompt Engineering", "Développement assisté par l'IA"]
+      },
+      "tools": {
+        "category": "Autres outils & technologies",
+        "items": ["Git", "GitHub", "Postman", "Docker", "Figma", "Arduino / IoT"]
       }
     }
   },
@@ -58,18 +106,62 @@
     "preview": "Aperçu du projet",
     "liveDemo": "Démo",
     "githubRepository": "Dépôt GitHub",
+    "viewMore": "Voir plus de projets",
+    "allProjects": "Tous les projets",
+    "allProjectsDescription": "Découvrez chaque projet, le rôle, les technologies et le lien.",
+    "viewProject": "Voir les détails du projet",
+    "backToProjects": "Retour à tous les projets",
+    "technologies": "Technologies",
     "projects": {
-      "portfolio": {
-        "title": "Portfolio V2",
-        "description": "Mon portfolio personnel avec une navigation moderne basée sur le scroll, de la musique de fond et des animations fluides."
+      "homeiq": {
+        "title": "HomeIQ",
+        "role": "Chef d'équipe & développeur Full-stack",
+        "duration": "Janvier 2026 – Avril 2026",
+        "description": "Plateforme de gestion d'appartements avec intégration du contrôle des appareils IoT via une application mobile.",
+        "technologies": ["Next.js", "NestJS", "PostgreSQL", "Redis", "React Native", "Arduino"],
+        "gradient": "from-violet-500/20 to-blue-500/20",
+        "link": "https://homeiq-gamma.vercel.app",
+        "github": ""
       },
-      "commerce": {
-        "title": "Plateforme E-Commerce",
-        "description": "Une solution e-commerce full-stack avec gestion du panier, authentification utilisateur et intégration du paiement."
+      "lensor": {
+        "title": "Lensor",
+        "role": "Développeur Full-stack",
+        "duration": "Août 2025 – Novembre 2025",
+        "description": "Plateforme sociale dédiée à la photographie et marketplace où les photographes partagent du contenu et achètent ou vendent des presets numériques.",
+        "technologies": ["Next.js", "NestJS", "MongoDB", "Redis", "Zustand"],
+        "gradient": "from-emerald-500/20 to-teal-500/20",
+        "link": "https://lensor-frontend.vercel.app",
+        "github": ""
       },
-      "analytics": {
-        "title": "Tableau de bord analytique",
-        "description": "Un tableau de bord de visualisation de données en temps réel pour suivre les performances du système et les métriques utilisateur."
+      "phu-cuong-logistics": {
+        "title": "Phu Cuong Logistics",
+        "role": "Développeur Full-stack",
+        "duration": "Juin 2026 – Juillet 2026",
+        "description": "Site B2B responsive présentant des produits agricoles, des services d'exportation et des capacités logistiques internationales.",
+        "technologies": ["Next.js", "Tailwind CSS", "NestJS", "MySQL"],
+        "gradient": "from-orange-500/20 to-red-500/20",
+        "link": "https://phucuonglogistic.com",
+        "github": ""
+      },
+      "fpt-mentor": {
+        "title": "FPT Mentor",
+        "role": "Chef d'équipe & développeur Front-end",
+        "duration": "Janvier 2024 – Mars 2024",
+        "description": "Plateforme de mentorat étudiant et de prise de rendez-vous développée pour l'Université FPT.",
+        "technologies": ["Next.js", "ExpressJS", "MySQL", "Zustand"],
+        "gradient": "from-cyan-500/20 to-sky-500/20",
+        "link": "",
+        "github": "https://github.com/baotrongnh/swp-mentor-booking-client"
+      },
+      "ours": {
+        "title": "Ours",
+        "role": "Développeur Full-stack",
+        "duration": "Septembre 2026 – Octobre 2026",
+        "description": "Application web personnalisée permettant aux couples de gérer leurs souvenirs, planifier des activités et échanger des lettres numériques privées.",
+        "technologies": ["Next.js", "Tailwind CSS"],
+        "gradient": "from-pink-500/20 to-purple-500/20",
+        "link": "https://us-mocha-iota.vercel.app",
+        "github": ""
       }
     }
   },
@@ -92,6 +184,7 @@
   "Dock": {
     "home": "Accueil",
     "about": "À propos",
+    "experience": "Expérience",
     "skills": "Compétences",
     "projects": "Projets",
     "contact": "Contact",
