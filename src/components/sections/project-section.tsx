@@ -61,12 +61,12 @@ function ProjectCard({
         aria-label={`${viewProjectLabel}: ${project.title}`}
         onClick={() => onSelect(project)}
       />
-      <div className={`relative w-full overflow-hidden bg-linear-to-br ${project.gradient} ${compact ? "h-14 sm:h-24" : "h-24 sm:h-28"}`}>
+      <div className={`relative aspect-video w-full overflow-hidden bg-linear-to-br ${project.gradient}`}>
         <Image
           src={project.thumbnail}
           alt={`${project.title} project`}
           fill
-          sizes={compact ? "(max-width: 479px) 50vw, (max-width: 1279px) 33vw, 25vw" : "(max-width: 639px) 90vw, 45vw"}
+          sizes={compact ? "(max-width: 479px) 50vw, (max-width: 1023px) 50vw, 33vw" : "(max-width: 639px) 90vw, 45vw"}
           className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
@@ -186,7 +186,7 @@ export default function ProjectSection() {
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="grid grid-cols-1 gap-3 min-[360px]:grid-cols-2 sm:gap-4 lg:gap-5"
+            className="grid grid-cols-1 gap-3 min-[360px]:grid-cols-2 sm:gap-4 lg:grid-cols-3 lg:gap-5"
           >
             {projects.slice(0, 4).map((project, index) => (
               <motion.div
